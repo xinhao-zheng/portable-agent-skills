@@ -1,6 +1,6 @@
 # Audit Skeleton · 核查推进骨架
 
-The order in which a citation audit advances. The illustrations are
+The advance order of a citation audit. The illustrations are
 domain-neutral; the skeleton is field-independent — it holds for a proof, an
 empirical study, a position piece, or a technical standard alike.
 本文件给出引证核查的推进顺序。范例均为领域中性；骨架与具体领域无关——理论证明、

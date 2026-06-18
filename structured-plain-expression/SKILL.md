@@ -3,13 +3,14 @@ name: structured-plain-expression
 description: >-
   Writes long-form documents in a structured plain-language voice — technical
   specs, project guides, execution blueprints, research notes, manuals — at once
-  professional and readable: the whole grasped in one screen, any detail found
-  in two minutes, the reader able to act on finishing. 将长文档写成"结构化白话"：
-  技术规范、项目指南、执行蓝图、研究纪要、说明手册——既专业又可读，一屏看全局、
-  两分钟找细节、读完能动手。Use when writing or rewriting a long document, spec,
-  guide, or manual, or when the user asks for "说人话的文档 / 结构化文档 / 白话
-  文档 / 施工图 / 蓝图 / 项目指南 / 执行手册 / 长文档", or "make this clearer /
-  more readable / more structured".
+  professional and readable: plain words over bare jargon, the whole grasped in
+  one screen, any detail found in two minutes, the reader able to act on
+  finishing. 将长文档写成"结构化白话"：技术规范、项目指南、执行蓝图、研究纪要、
+  说明手册——说人话、不甩术语，既专业又可读，一屏看全局、两分钟找细节、读完能动手。
+  Use when writing or rewriting a long document, spec, guide, or manual, or when
+  the user asks for "说人话的文档 / 结构化文档 / 白话文档 / 施工图 / 蓝图 / 项目
+  指南 / 执行手册 / 长文档", or "make this clearer / more readable / more
+  structured".
 ---
 
 # Structured Plain Expression · 结构化白话表达
@@ -24,9 +25,10 @@ the reader able to act the moment they finish.**
 
 It refuses two opposites: the bloated eight-part essay (professional but unread)
 and the loose ramble (readable but formless). Structure carries the logic; plain
-language carries the reader.
+language carries the reader — and plain is not the same as thin: it means turning
+every term into a sentence a colleague would actually say.
 它拒绝两个反面：八股（专业但没人读）与松散（好读但不成体系）。用结构承载逻辑，
-用白话承载读者。
+用白话承载读者——而白话不等于稀薄：它是把每个术语，都翻成一句同事真会说出口的话。
 
 ---
 
@@ -50,43 +52,45 @@ language carries the reader.
 6. **Explicit cross-reference** — point to a specific section or file, never
    "see above".
    **明确交叉引用**——指向具体小节或文件，不用"见上文"。
-7. **Close with a self-check** — end on a short checklist.
-   **以自检收尾**——结尾放一张简短清单。
+7. **Close, then self-check** — end on one carried-away line; for an argument, a
+   sharp contrastive coda (the austere-analytical-prose move). Print the checklist
+   only for an actionable doc; otherwise run it backstage before shipping.
+   **先收束，再自检**——以一句可带走的话收尾；若是论证，则用一句锋利的对照式格言
+   （冷峻思辨学术体的收法）。清单只为可执行文档而印，公开文则在发布前于幕后跑一遍。
 
 ---
 
 ## How to use | 怎么用
 
-**Writing new** — first read [logic.md](logic.md) for the build order (overview
+**Writing new** — first read [logic.md](logic.md) for the advance order (overview
 → layers → units → objections → cross-refs → self-check), then write per
 [style.md](style.md).
-**写新文**——先读 [logic.md](logic.md) 定搭建顺序（概览 → 分层 → 单元 → 预判 →
+**写新文**——先读 [logic.md](logic.md) 定推进顺序（概览 → 分层 → 单元 → 预判 →
 交叉引用 → 自检），再依 [style.md](style.md) 落笔。
 
 **Polishing existing** — first apply the language habits in [style.md](style.md)
-(tables with recaps, intuition first, dialogic turns), then check the
-architecture per [logic.md](logic.md).
-**润色旧文**——先按 [style.md](style.md) 套语言习惯（表格＋白话收束、直觉先行、
-对话感），再按 [logic.md](logic.md) 检查结构。
+(tables with recaps, plain words over jargon, dialogic turns), then check the
+skeleton per [logic.md](logic.md).
+**润色旧文**——先按 [style.md](style.md) 套语言习惯（表格＋白话收束、说人话不甩
+术语、对话感），再按 [logic.md](logic.md) 检查骨架。
 
 | File | Role |
 |------|------|
-| [logic.md](logic.md) | Document architecture · 文档架构（结构、层次、单元） |
+| [logic.md](logic.md) | Document skeleton, order of advance · 文档骨架、推进顺序 |
 | [style.md](style.md) | Sentence-level habits · 句段级写法（表达、语气、姿态） |
 
 ---
 
 ## One contrast | 一个最小对照
 
-Before (prose wall) · 原句（散文堆砌）:
+> Before (prose wall) — *There are several ways to extract text: tool A is light
+> but weak on scans; tool B is full-featured but heavy to install; tool C is
+> simple but has an old interface; for scans you need an OCR step.*
+> 原句（散文堆砌）：提取文本有几种方式：A 工具轻量但对扫描件弱；B 工具功能全但
+> 安装重；C 工具简单但接口老；扫描件还得走 OCR。
 
-> There are several ways to extract text: tool A is light but weak on scans;
-> tool B is full-featured but heavy to install; tool C is simple but has an old
-> interface; for scans you need an OCR step.
-> 提取文本有几种方式：A 工具轻量但对扫描件弱；B 工具功能全但安装重；C 工具简单
-> 但接口老；扫描件还得走 OCR。
-
-After (table + recap) · 改后（表格 + 收束）:
+> After (this voice) — a table, then one line:
+> 改后（本风格）：一张表，再一句话收束：
 
 | Tool | Best for · 适合 | Trade-off · 代价 |
 |------|----------------|------------------|

@@ -1,9 +1,9 @@
-# Argument Skeleton · 逻辑渐进思路
+# Argument Skeleton · 论证推进骨架
 
-The argument structure of the austere analytical voice. The illustrations below
-are domain-neutral; the skeleton is field-independent — it holds for a proof, an
+The advance order of the austere analytical voice. The illustrations are
+domain-neutral; the skeleton is field-independent — it holds for a proof, an
 empirical study, or a position piece alike.
-本文件给出"冷峻思辨学术体"的论证推进方式。下列范例均为领域中性；骨架与具体领域
+本文件给出"冷峻思辨学术体"的推进顺序。范例均为领域中性；骨架与具体领域
 无关——无论理论证明、实证研究还是立场论文皆适用。
 
 ---
