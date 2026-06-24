@@ -9,9 +9,9 @@ Two voices live in this file — separated by artifact type, both self-contained
 
 The austere analytical voice — same execution rules as the sibling skills in
 this repository: zero filler, load-bearing verbs, em-dash qualification, short
-sentence stress, honesty over rhetoric.
+sentence stress, honesty over rhetoric. Most rules carry ✓ and ✗.
 冷峻思辨学术体——与本仓库 sibling skill 同一执行规则：零套话、承重动词、破折号限定、
-短句重音、诚实压过修辞。
+短句重音、诚实压过修辞。多数规则配 ✓ 与 ✗。
 
 ### Diction | 用词
 

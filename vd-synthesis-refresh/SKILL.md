@@ -96,6 +96,26 @@ missing falsifiers or timestamp drift.
 
 ---
 
+## Window spans | 窗口跨度（Mode C）
+
+Mode C is span-agnostic: the date range in the filename *is* the window — a single
+day, 2 days, 7 days, or any n days. Files are added, never overwritten, so
+`generated_at` diffs across spans stay readable.
+模式 C 与跨度无关：文件名里的日期区间*即*窗口——单日、2 日、7 日，或任意 n 日。
+文件只增不覆盖，使跨跨度的 `generated_at` diff 可读。
+
+| Span · 跨度 | Filename · 文件名 | e.g. · 例 |
+| --- | --- | --- |
+| 1-day · 单日 | `rolling-window-YYYYMMDD-YYYYMMDD.md` (same date · 同日) | 当日新增的研判 |
+| n-day · n 日 | `rolling-window-YYYYMMDD-YYYYMMDD.md` | 最近 2 日 / 7 日 |
+| Month-to-date · 月初至今 | `rolling-window-YYYYMM01-YYYYMMDD.md` | 6/1 — now |
+
+A wider span calibrates against more baselines, not a longer list — same conflict
+chains, more triangulation points.
+跨度越宽，对照的基线越多，而非清单越长——同一组冲突链，更多三角验证点。
+
+---
+
 ## One contrast | 一个最小对照
 
 > Before (recap) — *"Memory bullish, power bullish, buy everything AI."*

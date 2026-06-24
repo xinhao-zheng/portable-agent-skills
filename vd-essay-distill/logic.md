@@ -1,9 +1,10 @@
 # Essay Skeleton · 文稿推进骨架
 
-The advance order for distilling one synthesis document into a public-account
-essay. The skeleton is field-independent; the path names are fixed for vd-research.
-本文件给出"把单份综合研判提炼为公众号文稿"的推进顺序。骨架与领域无关；路径名
-固定为 vd-research 约定。
+The advance order for distilling a chosen synthesis scope — one file, several, an
+n-day window, or a theme — into a public-account essay. The skeleton is
+field-independent; the path names are fixed for vd-research.
+本文件给出"把指定的综合研判范围——单份、多份、某个 n 天窗口或某个主题——提炼为
+公众号文稿"的推进顺序。骨架与领域无关；路径名固定为 vd-research 约定。
 
 ---
 
