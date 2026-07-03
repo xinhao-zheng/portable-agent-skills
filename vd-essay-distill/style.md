@@ -19,6 +19,14 @@ the stress, honesty over rhetoric. Most rules carry ✓ and ✗.
 2. **Verbs:** distill, project, bind, defend, refute — not "进行/展开/做好".
    **动词：** distill、project、bind、defend、refute——而非"进行/展开/做好"。
 
+### One-pass clean (skill docs) | 一键清洗（skill 文档）
+
+1. Delete filler and mood-adjectives. | 删套话与情绪形容词。
+2. Swap "readable / precise" for "what breaks if the gate is skipped". |
+   把"可读/精准"换成"跳过闸门会坏什么"。
+3. Check every paragraph advances by cause, not parallel bullets. |
+   检查段落因果推进，而非平行 bullet。
+
 ---
 
 ## Voice B — Essay output (`public-essays/*.md`) | 公众号文稿
@@ -97,63 +105,63 @@ Register check — the target sits between two failures · 调性标尺（落在
    - ✓ *"Goldman Sachs 6/23 服务器 primer：服务器物料里存储占比从约三成升到六成开外。"*
    - ✗ *"（见 §3.2，表 4）" / "据说"。*
 
-6a. **Cross-validate before writing — the synthesis is the spine, the web is the
-    check.** Verify each load-bearing figure against a live source; state what
-    survives, correct what conflicts, drop the uncorroborated. Caliber matters —
-    don't conflate an OEM *system* price (~15–20%) with a *component/spot* figure
-    (+30–60%+).
-    **落笔前交叉验证——综合研判是脊柱，联网是校验。** 逐个对照在线来源核对承重数字；
-    写经得起验证的，更正冲突的，删无印证的。口径要分清——别把 OEM *整机* 提价
-    （约 15–20%）与*组件/现货*涨幅（+30–60%+）混为一谈。
+7. **Cross-validate before writing — the synthesis is the spine, the web is the
+   check.** Verify each load-bearing figure against a live source; state what
+   survives, correct what conflicts, drop the uncorroborated. Caliber matters —
+   don't conflate an OEM *system* price (~15–20%) with a *component/spot* figure
+   (+30–60%+).
+   **落笔前交叉验证——综合研判是脊柱，联网是校验。** 逐个对照在线来源核对承重数字；
+   写经得起验证的，更正冲突的，删无印证的。口径要分清——别把 OEM *整机* 提价
+   （约 15–20%）与*组件/现货*涨幅（+30–60%+）混为一谈。
 
-6b. **One English name per institution — never mix forms.** Cite every research
-    house by a single canonical English name, fixed across the whole piece:
-    *Goldman Sachs · Morgan Stanley · J.P. Morgan · Citi · Bernstein · Deutsche
-    Bank · Jefferies · HSBC · TrendForce · Reuters*. Never alternate 花旗/Citi or
-    高盛/GS within one essay; pick the English form and hold it.
-    **每家机构只用一个英文名，不混用。** 每家研究机构用唯一的英文规范名，全篇固定：
-    *Goldman Sachs · Morgan Stanley · J.P. Morgan · Citi · Bernstein · Deutsche
-    Bank · Jefferies · HSBC · TrendForce · Reuters*。同一篇内绝不一会"花旗"一会 Citi、
-    一会"高盛"一会 GS；选定英文名并贯穿到底。
+8. **One English name per institution — never mix forms.** Cite every research
+   house by a single canonical English name, fixed across the whole piece:
+   *Goldman Sachs · Morgan Stanley · J.P. Morgan · Citi · Bernstein · Deutsche
+   Bank · Jefferies · HSBC · TrendForce · Reuters*. Never alternate 花旗/Citi or
+   高盛/GS within one essay; pick the English form and hold it.
+   **每家机构只用一个英文名，不混用。** 每家研究机构用唯一的英文规范名，全篇固定：
+   *Goldman Sachs · Morgan Stanley · J.P. Morgan · Citi · Bernstein · Deutsche
+   Bank · Jefferies · HSBC · TrendForce · Reuters*。同一篇内绝不一会"花旗"一会 Citi、
+   一会"高盛"一会 GS；选定英文名并贯穿到底。
 
-6c. **Never name the in-house source — anonymize as "第三方研报".** The firm's own
-    internal research (K-Research) must not be named in a public essay; carry its
-    points generically — *第三方研报 / 一家独立研究机构 / 另有独立研究* — keeping the
-    date for traceability, dropping the name.
-    **不点名自有研报——以"第三方研报"带过。** 本机构自有内部研究（K-Research）不得在
-    公众号文稿中点名；其观点以泛称承载——*第三方研报／一家独立研究机构／另有独立研究*
-    ——保留日期以便溯源，去掉名字。
-    - ✓ *"第三方研报（6/15）给的硬数字是变压器交期约 128 周……"*
-    - ✗ *"K-Research（6/15）……"*
+9. **Never name the in-house source — anonymize as "第三方研报".** The firm's own
+   internal research (K-Research) must not be named in a public essay; carry its
+   points generically — *第三方研报 / 一家独立研究机构 / 另有独立研究* — keeping the
+   date for traceability, dropping the name.
+   **不点名自有研报——以"第三方研报"带过。** 本机构自有内部研究（K-Research）不得在
+   公众号文稿中点名；其观点以泛称承载——*第三方研报／一家独立研究机构／另有独立研究*
+   ——保留日期以便溯源，去掉名字。
+   - ✓ *"第三方研报（6/15）给的硬数字是变压器交期约 128 周……"*
+   - ✗ *"K-Research（6/15）……"*
 
 ### Term on first use | 术语首次出现即点破
 
-7. **One precise clause, then keep the term** — explain, don't dumb down.
-   **一句精准注解，然后保留原词**——是讲清，不是稀释。
-   - ✓ *"HBM（贴在 GPU 旁的高带宽内存，单位晶圆面积是普通内存的三到四倍）……"*
+10. **One precise clause, then keep the term** — explain, don't dumb down.
+    **一句精准注解，然后保留原词**——是讲清，不是稀释。
+    - ✓ *"HBM（贴在 GPU 旁的高带宽内存，单位晶圆面积是普通内存的三到四倍）……"*
 
 ### Viewpoint + falsifier | 观点 + 证伪
 
-8. **State the stance; defend each judgment with a causal "because"; close the
-   analysis with the one observation that would refute it** — in prose, not a
-   checklist table.
-   **给出立场；每个判断附因果"因为"；以一条能推翻它的观察收束分析**——用散文，不用清单表。
-   - ✓ *"站在分配者一边——因为缺口是晶圆与产能分配锁死的结构性问题，不是需求脉冲；能推翻这一判断的，是四季度商品内存合约价由涨转跌。"*
+11. **State the stance; defend each judgment with a causal "because"; close the
+    analysis with the one observation that would refute it** — in prose, not a
+    checklist table.
+    **给出立场；每个判断附因果"因为"；以一条能推翻它的观察收束分析**——用散文，不用清单表。
+    - ✓ *"站在分配者一边——因为缺口是晶圆与产能分配锁死的结构性问题，不是需求脉冲；能推翻这一判断的，是四季度商品内存合约价由涨转跌。"*
 
 ### Close | 收束
 
-9. **One aphoristic, contrastive coda — brand-aligned, not a recap.**
-   **一句格言式对照收束——契合品牌，不复述。**
-   - ✓ *"真正稀缺的东西从不写在头条上；价值，归于能把它算清、定价、并决定如何分配的人。"*
-   - ✗ *"综上，本文讲了三点。"*
+12. **One aphoristic, contrastive coda — brand-aligned, not a recap.**
+    **一句格言式对照收束——契合品牌，不复述。**
+    - ✓ *"真正稀缺的东西从不写在头条上；价值，归于能把它算清、定价、并决定如何分配的人。"*
+    - ✗ *"综上，本文讲了三点。"*
 
-10. **No emoji, no clickbait title, 非投资建议.** Title states the thesis or the
+13. **No emoji, no clickbait title, 非投资建议.** Title states the thesis or the
     tension; front matter notes *非投资建议*.
     **无 emoji、无标题党、非投资建议。** 标题陈述主张或张力；front matter 标*非投资建议*。
 
 ### Length | 篇幅
 
-11. **Length follows scope — develop one argument, never list more facts.** Narrow
+14. **Length follows scope — develop one argument, never list more facts.** Narrow
     scope (one window) ~1500–2200 字; month-to-date / multi-file ~3000–4500 字. A
     wider scope means the single thesis is developed deeper with **more named
     conflicts woven in**, not a longer enumeration.

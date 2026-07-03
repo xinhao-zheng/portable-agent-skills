@@ -20,7 +20,6 @@ description: >-
   to 写公众号/发表稿/把综合研判改成文章/提炼成稿/月初至今的稿, draft a public essay,
   or turn a named synthesis scope (a window, a file, a month-to-date span, a theme)
   into a readable post.
-
 ---
 
 # Research Essay Distill · 综合研判转公众号文稿

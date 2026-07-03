@@ -34,10 +34,12 @@ domain-neutral where possible; the path names are fixed for vd-research.
 
 3. **Extract verbatim, then translate** — run `scripts/ingest.py` (no `--force`
    unless source changed); write `.extract-cache/<slug>_extracted_pages.json`
-   and scaffold `bilingual-transcripts/<slug>-Bilingual.md`. Translation fills
-   empty blocks — it does not replace the extract pass.
+   and scaffold `bilingual-transcripts/<slug>-Bilingual.md`, every body page
+   carrying `<!-- PDF Page N -->`. Translation fills empty blocks — it does not
+   replace the extract pass.
    **先逐字提取，再翻译**——运行 `scripts/ingest.py`（源未变则不 `--force`）；
-   写入 cache JSON 与双语 scaffold。翻译填充空块——不替代提取。
+   写入 cache JSON 与双语 scaffold，每个正文页带 `<!-- PDF Page N -->`。翻译
+   填充空块——不替代提取。
    - Gate: page count > 0; combined text > 500 chars, else flag *low-confidence*
      in summary front matter.
      闸门：页数 > 0；合计文本 > 500 字，否则在摘要元数据标 *low-confidence*。
@@ -50,9 +52,10 @@ domain-neutral where possible; the path names are fixed for vd-research.
 
 5. **Proposition-shape the summary** — the one-line conclusion must be
    checkable: *who wins, through which mechanism, on what horizon* — not
-   "bullish on AI".
+   "bullish on AI"; `stance` follows the causal chain in the body, not the
+   headline mood-word alone.
    **摘要命题化**——一句话结论须可检验：*谁因何机制在何窗口受益*——而非
-   "看多 AI"。
+   "看多 AI"；`stance` 跟随正文因果链，不单跟标题情绪词。
    - Required YAML: `report_date`, `issuer`, `title`, `topics`, `stance`, `source`
      pointing to the bilingual path.
      必填 YAML：`report_date`, `issuer`, `title`, `topics`, `stance`, `source`
@@ -98,12 +101,12 @@ domain-neutral where possible; the path names are fixed for vd-research.
    **解读产出用 agent token**——重译（填 EN/ZH 块）与 `-Summary.md` 由 agent 对照
    `*-Bilingual.md` 执笔，消耗操作者 agent token；`scripts/ingest.py` 只逐字提取并
    scaffold 空块——不替代 agent 步骤。Google 免费机翻或第三方 OCR 插件不是可交付终态。
-   - ✓ Agent reads `*-Bilingual.md`, writes the summary, fills empty EN/ZH blocks,
+   - e.g. Agent reads `*-Bilingual.md`, writes the summary, fills empty EN/ZH blocks,
      marks `translation: professional human-quality retranslation`.
-     Agent 读 `*-Bilingual.md`、写摘要、填空块，并标 `professional human-quality retranslation`。
-   - ✗ `deep_translator.GoogleTranslator` (or any free MT) as the final bilingual
-     or summary text; batch-summarizing via an external MT script.
-     以 Google 免费机翻作为双语/摘要终态；用外部 MT 脚本批量生成摘要。
+     范例：Agent 读 `*-Bilingual.md`、写摘要、填空块，并标 `professional human-quality retranslation`。
+   - Anti-pattern: `deep_translator.GoogleTranslator` (or any free MT) as the final
+     bilingual or summary text; batch-summarizing via an external MT script.
+     反模式：以 Google 免费机翻作为双语/摘要终态；用外部 MT 脚本批量生成摘要。
 
 ---
 

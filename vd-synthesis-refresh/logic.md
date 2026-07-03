@@ -115,10 +115,10 @@ else need be said.
    checklist only for actionable runbooks, not for published audit/window files.
    **格言式收束 + 幕后自检**——以一句对照句收尾，非 bullet 复述。发布前跑下面自检；
    清单仅印可执行手册，不印已发布的审计/窗口稿。
-   - ✓ *"Artifacts are frozen; who pays the bill is not — watch Q4 contracts."*
-     原件已冻结；谁埋单尚未——盯 Q4 合约。
-   - ✗ *"In summary, we discussed memory, power, and packaging."*
-     综上，我们讨论了存储、电力与封装。
+   - e.g. *"Artifacts are frozen; who pays the bill is not — watch Q4 contracts."*
+     范例："原件已冻结；谁埋单尚未——盯 Q4 合约。"
+   - Anti-pattern: *"In summary, we discussed memory, power, and packaging."*
+     反模式："综上，我们讨论了存储、电力与封装。"
 
 ---
 

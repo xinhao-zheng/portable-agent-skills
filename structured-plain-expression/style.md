@@ -18,6 +18,14 @@ stress, honesty over rhetoric. Most rules carry ✓ and ✗.
 2. **Verbs:** open, chain, unpack, source, anticipate, close — not "进行/展开/做好". |
    **动词：** open、chain、unpack、source、anticipate、close——而非"进行/展开/做好"。
 
+### One-pass clean (skill docs) | 一键清洗（skill 文档）
+
+1. Delete filler and mood-adjectives. | 删套话与情绪形容词。
+2. Swap "clear / readable" for "what the reader loses if a beat is skipped". |
+   把"清晰/好读"换成"少这一拍读者丢什么"。
+3. Check every paragraph advances by cause, not parallel bullets. |
+   检查段落因果推进，而非平行 bullet。
+
 ---
 
 ## Voice B — Research-post output | 帖子文体
@@ -94,7 +102,7 @@ Register check — the target sits between two failures · 调性标尺（落在
 
 ### Mark the limit honestly | 诚实标界
 
-7. **Say plainly what you did not do; never dress a推断 as proof.**
+7. **Say plainly what you did not do; never dress an inference as proof.**
    **把没做到的直说；绝不把推断装成证明。**
    - ✓ *"要诚实说，这次只做到"IC 暴涨 → 推断抱团 → 历史吻合"，还没用独立指标在同一时刻
      交叉验证——那是下一步。"*
@@ -117,8 +125,10 @@ Register check — the target sits between two failures · 调性标尺（落在
 ### Close + ring back | 收束 + 呼应
 
 10. **One aphoristic, contrastive coda that echoes the opening or the prior piece —
-    not a recap. No emoji, no clickbait title, 非投资建议.**
-    **一句格言式对照收尾，呼应开篇或前作——不复述。无 emoji、无标题党、非投资建议。**
+    not a recap. No emoji, no clickbait title; 非投资建议 when the subject is a
+    market.**
+    **一句格言式对照收尾，呼应开篇或前作——不复述。无 emoji、无标题党；涉市场则标
+    *非投资建议*。**
     - ✓ *"注意力温和扩散，它在短端给你动量；挤兑式集中，它在长端给你顶部的警报——同一个
       IC，一个用来进攻，一个用来避险。"* — ✗ *"综上所述，本文得出以下结论。"*
 
@@ -153,7 +163,7 @@ Register check — the target sits between two failures · 调性标尺（落在
 7. After each persuasive claim, add a rebuttal-and-answer; state the limit honestly
    ("还没……，那是下一步"). | 每个说服性结论后补反驳与回答；诚实标边界。
 8. Strip figure codes from headings (keep `FigN` only in the body); strip emoji and
-   clickbait; confirm 非投资建议. | 标题去图号（图号只留正文）；去 emoji 与标题党；
-   确认*非投资建议*。
+   clickbait; confirm 非投资建议 where the subject is a market. | 标题去图号（图号只
+   留正文）；去 emoji 与标题党；涉市场则确认*非投资建议*。
 9. End on one contrastive aphorism that rings back to the opening; cut any flat
    "综上". | 以一句呼应开篇的对照格言收尾；删掉平铺的"综上"。

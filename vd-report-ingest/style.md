@@ -88,7 +88,7 @@ in the summary file itself.**
 
 4. **Plain words over bare jargon** — unpack on first use; tickers and product
    codes may stay.
-   **白话优先于裸术语**——首次出现拆开； ticker 与产品代号可保留。
+   **白话优先于裸术语**——首次出现拆开；ticker 与产品代号可保留。
 
 5. **Source in plain words** — *"Bernstein 6/23 report, page-level anchor in
    bilingual file"* — not *"see above"*.

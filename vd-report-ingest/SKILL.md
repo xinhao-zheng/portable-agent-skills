@@ -45,32 +45,44 @@ this stage's only job.
    **闭合入库集**——一个源文件对应一个承载完整标题的 slug（只去真实扩展名、
    绝不在内部点号处截断）；被压成 `YYYYMMDD_<n>` 或在 `bilingual-transcripts/`/
    `report-summaries/` 中重复的 slug，是开提之前就能发现的缺陷。
-2. **Verbatim before translation** — extract page text first; translation fills
-   empty language blocks, never replaces the extract pass.
-   **先逐字提取再翻译**——先提取分页文本；翻译填充空语言块，不替代提取步骤。
-3. **Page-marker gate** — every body page carries `<!-- PDF Page N -->`; a
-   summary claim with no mappable page fails the gate.
-   **页标记闸门**——每个正文页带 `<!-- PDF Page N -->`；无法映射页码的摘要主张
-   判失败。
-4. **Human-grade translation boundary** — published bilingual MD carries
-   `translation: professional human-quality retranslation`; raw MT is not a
-   shippable final state.
-   **人工级翻译边界**——发布的双语 MD 标注 `professional human-quality retranslation`；
-   机器直译不是可交付终态。
-5. **Summary from anchor only** — `-Summary.md` is written only against a
-   completed `*-Bilingual.md`; no summary-from-PDF shortcut.
-   **仅锚定写摘要**——`-Summary.md` 只对照完整的 `*-Bilingual.md` 写；禁止
-   从 PDF 直写摘要的捷径。
-6. **Stance from mechanism** — `stance` follows the causal chain in the body, not
-   the headline mood-word alone.
-   **立场来自机制**——`stance` 跟随正文因果链，不单跟标题情绪词。
-7. **Index last, timestamp fresh** — run `scripts/index.py` after summaries;
-   `synthesis/all-reports-index.md` must carry a new `generated_at` UTC.
-   **最后索引、时间戳刷新**——摘要完成后运行 `scripts/index.py`；
-   `all-reports-index.md` 须带新的 `generated_at` UTC。
-8. **Named falsifiers** — each summary closes with one observable that would
-   break its one-line conclusion.
-   **具名证伪条件**——每份摘要以一条可观察项收束，说明何种情形将推翻一句话结论。
+2. **Gap first: opaque substrate** — the problem is not a missing summary but a
+   wrong substrate: binary layout, no page index, language split; extraction
+   supplies structure, never judgment.
+   **缺口先行：不透明基底**——问题不是"缺摘要"，而是"基底错误"：版式封闭、
+   无页码、语种割裂；提取供给结构，不供给判断。
+3. **Verbatim first, page-marker gate** — extract page text before any
+   translation, every body page carrying `<!-- PDF Page N -->`; translation
+   fills empty language blocks, never replaces the extract pass, and a summary
+   claim with no mappable page fails the gate.
+   **先逐字提取、页标记闸门**——任何翻译之前先提取分页文本，每个正文页带
+   `<!-- PDF Page N -->`；翻译填充空语言块、不替代提取步骤，无法映射页码的
+   摘要主张判失败。
+4. **Artifact-vs-opinion spine** — named files (evidence) vs claims in the
+   agent's head (non-evidence); no `-Summary.md` until the `*-Bilingual.md`
+   body pages are populated — no summary-from-PDF shortcut.
+   **工件 vs 观点脊柱**——具名文件（证据）vs 代理记忆中的主张（非证据）；
+   `*-Bilingual.md` 正文页未填齐之前不写 `-Summary.md`——禁止从 PDF 直写
+   摘要的捷径。
+5. **Proposition-shaped summary** — the one-line conclusion is checkable (*who
+   wins, through which mechanism, on what horizon*); `stance` follows the causal
+   chain in the body, not the headline mood-word alone.
+   **摘要命题化**——一句话结论可检验（*谁因何机制在何窗口受益*）；`stance`
+   跟随正文因果链，不单跟标题情绪词。
+6. **Evidence by stage** — one table maps each stage to its named artifact and
+   gate; published bilingual MD carries `translation: professional human-quality
+   retranslation` — raw MT is not a shippable final state.
+   **分阶段证据对照**——一张表把每步映射到具名工件与闸门；发布的双语 MD 标注
+   `professional human-quality retranslation`——机器直译不是可交付终态。
+7. **Named falsifiers** — each summary closes with one observable that would
+   break its one-line conclusion; a thin OCR/scan extraction carries an explicit
+   confidence caveat.
+   **具名证伪条件**——每份摘要以一条可观察项收束，说明何种情形将推翻一句话
+   结论；OCR/扫描提取稀薄时写明置信度局限。
+8. **Index coda, timestamp fresh** — ingest ends at `scripts/index.py`;
+   `synthesis/all-reports-index.md` must carry a new `generated_at` UTC —
+   cross-report synthesis is a separate task.
+   **索引收束、时间戳刷新**——入库止于 `scripts/index.py`；
+   `all-reports-index.md` 须带新的 `generated_at` UTC——跨报告综合是独立任务。
 9. **Agent token for interpretive output** — retranslation and `-Summary.md`
    are agent-authored from `*-Bilingual.md`; free Google MT or a third-party OCR
    plugin is not a shippable final state (see [logic.md](logic.md) step 9).
@@ -82,11 +94,11 @@ this stage's only job.
 ## How to use | 怎么用
 
 **Ingesting fresh** — first read [logic.md](logic.md) for the advance order
-(intake → extract → retranslate → summarize → index → falsifier check), then
+(intake → extract → retranslate → summarize with its falsifier → index), then
 execute per [style.md](style.md): skill docs in the austere voice; summary files
 in the embedded plain-output voice (Voice B in that file).
-**新入库**——先读 [logic.md](logic.md) 定推进顺序（接收 → 提取 → 重译 → 摘要 →
-索引 → 证伪检验），再依 [style.md](style.md) 执行：skill 文档用冷峻体；摘要文件
+**新入库**——先读 [logic.md](logic.md) 定推进顺序（接收 → 提取 → 重译 → 摘要并
+点名证伪 → 索引），再依 [style.md](style.md) 执行：skill 文档用冷峻体；摘要文件
 用该文件内嵌的白话输出体（Voice B）。
 
 **Repairing a broken chain** — first locate which artifact is missing or thin

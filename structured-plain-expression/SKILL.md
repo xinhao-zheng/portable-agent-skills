@@ -56,9 +56,10 @@ no sourced number, no falsifiable claim — nothing a specialist can lean on.
 ## Style fingerprint | 风格指纹（八项，与 logic.md 八步一一对应）
 
 1. **Title is the finding** — the title states one falsifiable conclusion, not a
-   topic label, with a one-line front matter (what this studies, 非投资建议).
+   topic label, with a one-line front matter (what this studies; a 非投资建议
+   note when the subject is a market).
    **标题即结论**——标题陈述一条可证伪的结论、而非题材标签，紧跟一行 front matter
-   （在研究什么、非投资建议）。
+   （在研究什么；涉市场则加*非投资建议*）。
 2. **Overview first** — within the first screen, one "30-second lookup" table
    (reader's question / our answer / which figure), closed by a one-line thesis;
    stop there and still leave with 80%.
@@ -92,9 +93,9 @@ no sourced number, no falsifiable claim — nothing a specialist can lean on.
    先行、术语拆开、必要处一个比喻（句段级习惯见 style.md）。
 8. **Aphoristic close, ringing back** — each section ends on one bolded carried-away
    line; the whole closes on one sharp contrastive aphorism echoing the opening (or
-   the prior piece). No emoji, no clickbait, 非投资建议.
+   the prior piece). No emoji, no clickbait; 非投资建议 when the subject is a market.
    **格言收尾、首尾呼应**——每节一句加粗、可带走的话；全文以一句锋利的对照式格言收尾，
-   呼应开篇（或前作）。无 emoji、无标题党、非投资建议。
+   呼应开篇（或前作）。无 emoji、无标题党；涉市场则标*非投资建议*。
 
 ---
 

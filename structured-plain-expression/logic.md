@@ -1,22 +1,25 @@
 # Document Skeleton · 研究帖推进骨架
 
 The advance order of a structured plain-language research post. The illustrations
-are domain-neutral; the skeleton holds for any data-backed study — an empirical
-result, a backtest review, a market post-mortem.
-本文件给出结构化白话研究帖的推进顺序。范例为领域中性；骨架适用于任何有数据支撑的研究——
-实证结果、回测复盘、行情复盘皆可。
+draw on one quant case for concreteness; the skeleton is field-independent — it
+holds for any data-backed study: an experiment report, a benchmark review, a
+market post-mortem.
+本文件给出结构化白话研究帖的推进顺序。范例取自同一个量化案例以求具体；骨架与领域
+无关——任何有数据支撑的研究皆适用：实验报告、基准测评、行情复盘。
 
 ---
 
-## Order of advance | 推进顺序（八步，与 SKILL.md 八项指纹一一对应）
+## Order of advance | 推进顺序（默认骨架）
 
 1. **Title is the finding** — the title states one falsifiable conclusion, not a
-   topic label; a one-line front matter follows (what this post studies, plus
-   *非投资建议*).
+   topic label; a one-line front matter follows (what this post studies — plus
+   *非投资建议* when the subject is a market).
    **标题即结论**——标题陈述一条可证伪的结论，而非题材标签；紧跟一行 front matter
-   （这篇在研究什么，外加*非投资建议*）。
-   - ✓ *"中长期概念 IC 平时无效，它的突然加速是抱团行情的警报"*
-   - ✗ *"关于概念动量 IC 的一些观察"*（题材标签，不是结论）
+   （这篇在研究什么——涉市场则外加*非投资建议*）。
+   - e.g. *"中长期概念 IC 平时无效，它的突然加速是抱团行情的警报"* ·
+     *"新索引没有加速查询：P99 的改善全部来自缓存命中率上升"*
+   - Anti-pattern (a topic label, not a finding): *"关于概念动量 IC 的一些观察"*。
+     反模式（题材标签，非结论）。
 
 2. **Overview first: a 30-second lookup** — within the first 200 words, one table
    (reader's question / our answer / which figure) closed by a one-line thesis; a
@@ -64,7 +67,7 @@ result, a backtest review, a market post-mortem.
    visible "why" reads as an assertion.
    **每个意外都给因果链**——用大白话给出因果链（A → B → C）；正面回答"为什么是 X 不是
    Y"。没有可见"为什么"的数字或结论，读起来是断言。
-   - ✓ *"要让中长期排序重新可预测，只有资金把相对格局焊死一种情形 → 这正是抱团 → 所以
+   - e.g. *"要让中长期排序重新可预测，只有资金把相对格局焊死一种情形 → 这正是抱团 → 所以
      IC 暴涨反推出抱团。"*
 
 8. **Aphoristic close, ringing back** — section 5 closes on one sharp contrastive
@@ -72,7 +75,9 @@ result, a backtest review, a market post-mortem.
    then run the self-check below before shipping.
    **格言收尾、首尾呼应**——第 5 节以一句锋利的对照式格言收尾、呼应开篇（或前作），而非
    平铺总结；发布前再跑一遍下面的自检。
-   - ✓ *"同一个 IC，一个用来进攻，一个用来避险。"* — ✗ *"综上，本文讲了五点。"*
+   - e.g. *"同一个 IC，一个用来进攻，一个用来避险。"*
+   - Anti-pattern (a flat recap): *"综上，本文讲了五点。"*
+     反模式（平铺总结）。
 
 ---
 
@@ -97,5 +102,5 @@ result, a backtest review, a market post-mortem.
 - [ ] Are headings short, progressively numbered, free of engineering codes (no
       Fig-XXX in headings)? | 标题是否简短、连续编号、不带工程口径（标题里无 Fig-XXX）？
 - [ ] Does the piece close on one carried-away aphorism that rings back, with no
-      emoji and a 非投资建议 note? | 全文是否以一句呼应开篇的格言收尾、无 emoji、标
-      *非投资建议*？
+      emoji — and a 非投资建议 note when the subject is a market? |
+      全文是否以一句呼应开篇的格言收尾、无 emoji——涉市场时是否标*非投资建议*？

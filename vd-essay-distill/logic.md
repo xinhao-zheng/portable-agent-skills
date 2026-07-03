@@ -20,9 +20,10 @@ field-independent; the path names are fixed for vd-research.
    研报是**被引用的证据**，绝不作为叙述主体：不写"我们读了 N 份研报"、"这些研报的共同
    主线"、"把它们摞在一起"。陈述什么为真、为何重要；让引用承载出处。主张是一两句能被
    复述、且能被未来数据推翻的话。
-   - ✓ *"这一轮 AI 真正在重新分布的不是产能，而是分配权：掌握分配权的一端攫取价值，
+   - e.g. *"这一轮 AI 真正在重新分布的不是产能，而是分配权：掌握分配权的一端攫取价值，
      没有议价权的一端承担成本。"*（直接立洞见）
-   - ✗ *"六月这一个月，我们读了六十多份研报……它们浮出同一条主线。"*（复述研报来源）
+   - Anti-pattern (narrating the source): *"六月这一个月，我们读了六十多份研报……
+     它们浮出同一条主线。"*（复述研报来源）
 
 2. **Scope the input — the reader's call** — the user names what to distill: one
    `synthesis/*.md`, several, an n-day rolling window, or a theme sliced across
