@@ -1,25 +1,16 @@
 ---
 name: vd-essay-distill
 description: >-
-  Distill a user-chosen slice of synthesis — one file, several, an n-day rolling
-  window, a month-to-date span, or a named topic — into a public-account essay in
-  Vertex Dimension's research voice: austere-aligned and precise yet told as a
-  story, stating insights as the firm's own analysis (reports cited as evidence,
-  never narrated), advancing by causal inference to a clear, defended viewpoint,
-  naming the conflicts, and citing each number with its real source cross-validated
-  against live sources (anti-hallucination) — not a dump of tables, not chatty. A
-  general method, not a fixed report: the reader picks the scope, and a wider scope
-  earns a deeper essay under one thesis. Self-contained — carries its own skill-doc
-  voice and essay-output voice; no other skill need be loaded. 把用户指定的综合研判
-  切片——单份、多份、某个 n 天滚动窗口、月初至今、或某个主题——以 Vertex Dimension
-  的研究声音提炼为公众号文稿：向冷峻体对齐、精准却以故事讲出，把洞见作为本机构分析陈述
-  （研报作引用证据、不复述），以因果推进到清晰有据的观点，点名矛盾、每个数字都带真实
-  出处并对照在线来源交叉验证（防幻觉）——不堆表格、不闲聊。通用方法而非固定报表：范围由
-  读者指定，范围越宽、越在同一主线下写得越深。
-  自洽完整——内含 skill 文档文体与文稿文体，无需加载其他 skill。Use when the user asks
-  to 写公众号/发表稿/把综合研判改成文章/提炼成稿/月初至今的稿, draft a public essay,
-  or turn a named synthesis scope (a window, a file, a month-to-date span, a theme)
-  into a readable post.
+  Distill a user-chosen synthesis scope — one file, several files, a rolling
+  window, month to date, or a named topic — into a public research essay in Vertex
+  Dimension's voice. Treat reports as cited evidence, not narrative; advance one
+  thesis through causal inference; surface conflicts; source and cross-check every
+  number; avoid table dumps and chatty prose. Wider evidence must earn a deeper
+  argument, not a longer summary. 把用户指定的综合研判范围——单份、多份、滚动窗口、月初
+  至今或主题——提炼为 Vertex Dimension 研究文稿：研报只作引用证据，以一条主线和因果
+  推进形成有据观点，点名冲突，每个数字带真实出处并交叉核验；不堆表格，不闲聊，不把
+  范围扩大误写成摘要变长。Use when 写公众号/发表稿/把综合研判改成文章/提炼成稿/月初至今的稿,
+  drafting a public essay, or turning a named synthesis scope into a readable post.
 ---
 
 # Research Essay Distill · 综合研判转公众号文稿

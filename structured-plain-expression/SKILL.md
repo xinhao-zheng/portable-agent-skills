@@ -2,23 +2,15 @@
 name: structured-plain-expression
 description: >-
   Turn one dataset, experiment, or investigation into a structured plain-language
-  research post — a layperson finishes it in one screen, a specialist can't poke a
-  logic hole in it. The title states the finding; a 30-second lookup opens it;
-  evidence advances figure by figure, each read in plain words (how to read it →
-  what it shows → what it leads to → one bolded takeaway); every number carries its
-  real source; insights stack from baseline → mechanism → limit; one aphoristic,
-  contrastive line closes it. Plain is not thin — every term becomes a sentence a
-  colleague would actually say; structure carries the logic, plain language carries
-  the reader. Self-contained: its own skill-doc voice and post-output voice, no
-  other skill need be loaded.
-  把一份数据、实验或调查，写成"外行一屏读完、内行挑不出逻辑漏洞"的结构化白话研究帖：
-  标题即结论；开篇一张 30 秒速查；证据逐图推进，每张图都用人话讲清（怎么看 → 看出什么 →
-  接什么 → 一句加粗收束）；每个数字带真实出处；洞见从基线 → 机制 → 边界层层垒上；一句
-  锋利的对照式格言收尾。白话不等于稀薄——每个术语都翻成同事真会说出口的一句话；用结构
-  承载逻辑，用白话承载读者。自洽完整——内含 skill 文档文体与帖子文体，无需加载其他 skill。
-  Use when writing or rewriting a research post, 复盘帖, 数据分析帖, 实证总结, 把一份
-  数据/实验写成帖子, 说人话的研究长文, 结构化文档, or "make this clearer / more
-  structured / 说人话 / 逻辑再清晰一点".
+  research post: state the finding in the title; open with a 30-second lookup;
+  advance figure by figure; explain how to read each result, what it shows, and
+  what follows; source every number; build insight from baseline to mechanism to
+  limit; close with one contrastive line. Keep the prose lay-readable without
+  thinning the logic. 把一份数据、实验或调查写成结构化白话研究帖：标题即结论，开篇提供
+  30 秒速查，证据逐图推进，用人话解释怎么看、看出什么、接出什么；每个数字带真实出处，
+  洞见从基线推进到机制与边界，并以一句对照收束。Use when writing or rewriting a
+  research post, 复盘帖, 数据分析帖, 实证总结, 把一份数据/实验写成帖子, 说人话的研究长文,
+  结构化文档, or "make this clearer / more structured / 说人话 / 逻辑再清晰一点".
 ---
 
 # Structured Plain Expression · 结构化白话研究帖

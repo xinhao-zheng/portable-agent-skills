@@ -1,187 +1,248 @@
-# cursor-skills
+# portable-agent-skills
 
-A collection of Cursor Agent Skills, centered on writing. Each skill is a
-self-contained folder defined by two things — its **argument logic** (how the
-reasoning advances) and its **language style** (how each sentence reads); Cursor
-loads it only when the skill's `description` matches the task. The repository is
-flat: skills are added as sibling folders, not nested.
-Cursor Agent Skills 集合，以写作为主。每个 skill 由两件事定义——**论证逻辑**
-（论证如何推进）与**语言风格**（每句如何读起来）；仅当 skill 的 `description`
-命中任务时，Cursor 才加载它。仓库保持扁平：skill 以同级文件夹新增，不嵌套。
+A portable library of Agent Skills for evidence-bearing writing, research,
+coursework, and production. Each skill binds one task contract to two internal
+layers — **logic** (how the work advances) and **style** (how the result reads) —
+then exposes the same `SKILL.md` to Cursor, Codex, and Claude Code. Hosts differ;
+the method does not.
+面向写作、研究、课程与生产任务的可迁移 Agent Skills 库。每个 skill 把一项任务契约绑定到
+两个内部层——**逻辑**（工作如何推进）与**语言**（结果如何读起来）——再以同一份
+`SKILL.md` 供 Cursor、Codex 与 Claude Code 加载。宿主不同；方法不变。
 
 ---
 
 ## Skills | 技能
 
+| Skill | Purpose | Status |
+|---|---|---|
+| [`austere-analytical-prose`](austere-analytical-prose/SKILL.md) | Austere analytical prose for papers and technical arguments · 论文与技术论证的冷峻思辨文体 | active · 已发布 |
+| [`citation-integrity-audit`](citation-integrity-audit/SKILL.md) | Re-checkable citation provenance for a paper · 论文引用的可复核溯源台账 | active · 已发布 |
+| [`structured-plain-expression`](structured-plain-expression/SKILL.md) | One dataset or study → structured plain-language research post · 单一数据或研究 → 结构化白话研究帖 | active · 已发布 |
+| [`reframing-research-post`](reframing-research-post/SKILL.md) | Heterogeneous evidence → earned thesis and calibrated judgment · 异质证据 → 经证据赢得的论题与校准判断 | active · 已发布 |
+| [`vd-report-ingest`](vd-report-ingest/SKILL.md) | New PDF/Markdown/image → bilingual transcript + summary · 新研报 → 双语文稿与摘要 | active · 已发布 |
+| [`vd-synthesis-refresh`](vd-synthesis-refresh/SKILL.md) | Summaries → index, conflict audit, or rolling synthesis · 摘要 → 索引、冲突审计或滚动综合 | active · 已发布 |
+| [`vd-essay-distill`](vd-essay-distill/SKILL.md) | Chosen synthesis scope → public research essay · 指定综合范围 → 对外研究文稿 | active · 已发布 |
+| [`vd-latex-render`](vd-latex-render/SKILL.md) | Finished document → brand LaTeX + PDF · 定稿文档 → 品牌 LaTeX 与 PDF | active · 已发布 |
+| [`stanford-lecture-notes`](stanford-lecture-notes/SKILL.md) | Structured course sources → traceable notes or unit synthesis · 课程来源 → 可追溯笔记或单元综合 | active · 已发布 |
+| [`stanford-assignment-guides`](stanford-assignment-guides/SKILL.md) | Assignment sources → bilingual view, overview, and action guide · 作业来源 → 双语题面、概述与行动 Guide | active · 已发布 |
+| [`stanford-assignment-analysis`](stanford-assignment-analysis/SKILL.md) | Completed coursework → evidence-linked analysis · 已完成作业 → 证据可追溯分析 | active · 已发布 |
+| [`stanford-assignment-visuals`](stanford-assignment-visuals/SKILL.md) | Validated course content → instructional bitmap set · 已验证课程内容 → 教学位图组 | active · 已发布 |
 
-| Skill                                                         | Purpose                                                                          | Status       |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------ |
-| [`austere-analytical-prose`](austere-analytical-prose/SKILL.md)       | An austere, analytical voice for papers and technical arguments · 论文与技术论证的冷峻思辨文体 | active · 已发布 |
-| [`citation-integrity-audit`](citation-integrity-audit/SKILL.md)       | A re-checkable provenance ledger for a paper's citations · 论文引用的可复核溯源台账         | active · 已发布 |
-| [`structured-plain-expression`](structured-plain-expression/SKILL.md) | A structured plain-language research post from one dataset/study — finding-first, evidence as a chain, sourced numbers · 把一份数据/研究写成结构化白话研究帖：结论先行、证据成链、数字带出处 | active · 已发布 |
-| [`reframing-research-post`](reframing-research-post/SKILL.md) | An earned thesis from heterogeneous evidence — competing frames, independent triangulation, causal tests, hidden bills, and calibrated judgments · 从异质材料中赢得论题：框架竞争、独立三角验证、因果检验、隐藏账单与校准判断 | active · 已发布 |
-| [`vd-report-ingest`](vd-report-ingest/SKILL.md) | Ingest new PDF/MD/image → bilingual transcript + summary · 新研报入库：提取、双语、摘要 | active · 已发布 |
-| [`vd-synthesis-refresh`](vd-synthesis-refresh/SKILL.md) | Rebuild index, cross-report audit, or rolling window · 刷新索引、冲突审计或滚动窗口 | active · 已发布 |
-| [`vd-essay-distill`](vd-essay-distill/SKILL.md) | Distill a chosen synthesis scope into a public-account essay · 综合研判转公众号文稿 | active · 已发布 |
-| [`vd-latex-render`](vd-latex-render/SKILL.md) | Typeset a chosen document into brand LaTeX + PDF · 把文稿排成品牌 LaTeX + PDF | active · 已发布 |
-| [`stanford-lecture-notes`](stanford-lecture-notes/SKILL.md) | Apply the Stanford-derived note method to Stanford or other course materials · 将源自 Stanford 的笔记方法用于 Stanford 或其他课程材料 | active · 已发布 |
-| [`stanford-assignment-guides`](stanford-assignment-guides/SKILL.md) | Apply Stanford's closed assignment-model method to bilingual, overview, and action guides · 将 Stanford 闭合作业模型方法用于双语、概述与行动 Guide | active · 已发布 |
-| [`stanford-assignment-analysis`](stanford-assignment-analysis/SKILL.md) | Apply Stanford's evidence-to-explanation chain to completed coursework · 将 Stanford 的证据—解释链用于已完成课程作业 | active · 已发布 |
-| [`stanford-assignment-visuals`](stanford-assignment-visuals/SKILL.md) | Apply Stanford's instructional-visual method to assignments or course units, with local identity and QA · 将 Stanford 教学配图方法用于作业或课程单元，并继承本地身份与 QA | active · 已发布 |
-
-Each of the twelve skills is **self-contained**: its `SKILL.md`, `logic.md`, and `style.md`
-carry every rule needed to execute that task. No other skill file need be loaded.
-Every skill's documentation is written in one voice — the austere-analytical-prose
-discipline (narrow claim → causal advance → evidence → falsifiability → aphoristic
-coda; each skill's fingerprints mapped one-to-one onto its logic steps), so the whole
-folder reads as one author; only the task differs.
-十二个 skill 均**自洽**：其 `SKILL.md`、`logic.md`、`style.md` 含执行该任务所需的全部规则，
-无需加载其他 skill 文件。每个 skill 的文档共用一种声音——冷峻思辨学术体的纪律（收窄主张 →
-因果推进 → 证据 → 可证伪 → 格言收束；每个 skill 的指纹与其 logic 步一一对应），故整座文件夹
-读如一人之手；只是任务不同。
-
-The two general research-post skills divide the reasoning job deliberately.
-`structured-plain-expression` turns **one dataset, experiment, or investigation**
-into a figure-by-figure evidence chain. `reframing-research-post` works across a
-**heterogeneous corpus** — primarily for company and industry research, with the
-same neutral method portable to other fields — when the task is to let competing
-explanations fight, derive an insight no single source states, and land in a
-calibrated conditional judgment. They share plain delivery and evidence discipline;
-their primary inference jobs differ.
-两个通用研究帖 skill 刻意拆开推理任务。`structured-plain-expression` 把**一份数据、实验
-或调查**写成逐图推进的证据链；`reframing-research-post` 面向**异质材料集合**——以公司和
-产业研究为主，同一中性方法可迁移到其他领域——让竞争解释交锋，推出没有单一来源直接说出
-的洞见，并落到校准后的条件判断。二者共用白话表达与证据纪律；主要推断任务不同。
-
-The four `vd-*` skills are **Vertex Dimension's research workflow** (ingest →
-synthesis → essay → render). They embed two voices in `style.md` — **Voice A**
-(austere, for the skill docs) and **Voice B** (the deliverable: structured plain for
-`report-summaries/` and `synthesis/`, the austere-but-public, brand-aligned essay
-voice for `public-essays/`, and the austere monochrome typesetting voice for the
-`latex/` PDF) — and carry the brand ethos consistently (*traceable text*; *let the
-better answer win, not the louder one*; restraint as premium), without naming
-sibling skills in deliverable files.
-四个 `vd-*` skill 是 **Vertex Dimension 的研报工作流**（入库 → 综合研判 → 文稿 → 排版）。
-它们在 `style.md` 内嵌两种声音——**Voice A**（冷峻，用于 skill 文档）与 **Voice B**（交付物：
-`report-summaries/`、`synthesis/` 用结构化白话，`public-essays/` 用冷峻但面向公众、契合
-品牌的文稿体，`latex/` PDF 用冷峻纯黑白的排版体）——并一致承载品牌内核（*可追溯的文本*；
-*让更好的答案胜出、而非更响的那个*；克制即高级），且交付物中不点名 sibling skill。
-
-The four `stanford-*` skills are a **Stanford-derived, repository-adaptive course
-learning-production workflow** (lecture sources → notes; assignment sources →
-guides; completed work → analysis; validated assignment/unit content → visuals).
-The original Stanford source workflow is the named reference profile;
-institutional identity alone never activates its legacy paths or formats. That
-profile activates only when the live
-repository matches its artifact pattern. Stanford-branded output additionally
-requires verified Stanford provenance or explicit user direction. Any nonmatching
-repository — including another Stanford course — derives sources, names, paths,
-mathematical conventions, and visual identity locally while retaining the same
-task purpose and quality gates. Stanford marks provenance, not an applicability
-boundary. One chain. Four jobs.
-四个 `stanford-*` skill 构成一套**源自 Stanford、适配仓库的课程内容生产工作流**（讲义
-来源 → 笔记；作业来源 → Guide；已完成作业 → 分析；已验证作业/单元内容 → 配图）。原
-Stanford 源工作流是具名参照 profile；仅有 Stanford 机构身份，不足以启用其旧路径与格式。
-只有真实仓库匹配该工件模式时，profile 才生效。Stanford 品牌输出还须有经验证的 Stanford
-来源或用户明确指定。任何不匹配的仓库——包括另一门 Stanford 课程——都从本地推导来源、
-命名、路径、数学约定与视觉身份，同时保留相同的任务目的与质量闸门。Stanford 标示方法来源，
-不划定适用边界。一条链。四项工作。
+The catalog is flat: one skill, one sibling folder. No skill requires another
+skill to be loaded. External tools remain explicit runtime prerequisites, never
+hidden sibling dependencies.
+目录保持扁平：一个 skill，一个同级文件夹。任何 skill 都不要求同时加载另一个 skill；
+外部工具属于显式运行前提，不伪装成隐藏的同级依赖。
 
 ---
 
-## Stanford project route | Stanford 项目路径
+## Contract | 契约
 
-When the current Stanford repository matches the reference profile, the four
-skills divide inputs and outputs as follows. The paths below describe this live
-workflow; each skill still verifies them before use.
-当前 Stanford 仓库命中参照 profile 时，四个 skill 按下表划分输入与输出。下列路径描述当前
-真实工作流；每个 skill 使用前仍会重新核验。
+The portability claim is narrow: any host implementing the Agent Skills format
+can load the same task logic and output rules. It does not claim that every host
+ships the same tools, permissions, or renderers. Format travels. Capability must
+still be present.
+可迁移主张刻意收窄：任何实现 Agent Skills 格式的宿主，都能加载同一套任务逻辑与输出规则；
+这不意味着每个宿主自带相同工具、权限或渲染器。格式可以迁移；能力仍须真实存在。
+
+| Layer | Role | Invariant |
+|---|---|---|
+| `name` + `description` | Discovery · 发现 | concise scope, real triggers, no platform lock-in · 范围简洁、触发真实、不锁平台 |
+| `SKILL.md` | Task contract · 任务契约 | inputs, outputs, gates, and use path · 输入、输出、闸门与使用路径 |
+| `logic.md` | Reasoning layer · 逻辑层 | causal order, evidence boundary, QA · 因果顺序、证据边界与 QA |
+| `style.md` | Language layer · 语言层 | documentation voice + artifact-specific output voice · 文档声线＋产物专属声线 |
+| Runtime | Host capability · 宿主能力 | tools are checked before the stage that needs them · 工具在对应阶段开始前检查 |
+
+All skill documentation follows the `austere-analytical-prose` discipline:
+narrow claim → causal advance → evidence → limitation → earned coda. The
+deliverable voice is task-specific. Shared authorship does not mean identical
+outputs; it means the same evidentiary discipline survives every task.
+全部 skill 文档遵循 `austere-analytical-prose` 的纪律：收窄主张 → 因果推进 → 证据 →
+边界 → 经论证赢得的收束。实际交付物使用任务专属声线。同一作者并不意味着产物同腔；
+它意味着同一套证据纪律穿过每项任务而不变。
+
+---
+
+## Families | 技能族
+
+| Family | Chain | Boundary |
+|---|---|---|
+| General writing & research · 通用写作与研究 | prose discipline; citation audit; one-study explanation; heterogeneous-evidence reframing · 文体纪律；引用审计；单一研究解释；异质证据重构 | method-neutral; source claims remain answerable · 方法中立；来源主张可追问 |
+| Vertex Dimension · 维度研报 | ingest → synthesis → essay → LaTeX/PDF · 入库 → 综合 → 文稿 → 排版 | project identity and local scripts remain explicit · 项目身份与本地脚本保持显式 |
+| Stanford-derived course work · Stanford 衍生课程工作流 | lecture sources → notes; assignment sources → guides; completed work → analysis; validated content → visuals · 讲义 → 笔记；题面 → Guide；完成工件 → 分析；已验证内容 → 配图 | Stanford is a verified reference profile, not an applicability boundary · Stanford 是经验证参照 profile，不是适用边界 |
+
+`structured-plain-expression` and `reframing-research-post` share plain delivery
+but solve different inference jobs. The first explains one dataset, experiment,
+or investigation figure by figure. The second lets competing explanations fight
+across a heterogeneous corpus and earns one conditional judgment.
+`structured-plain-expression` 与 `reframing-research-post` 共用白话表达，却承担不同推断
+任务：前者逐图解释一份数据、实验或调查；后者让异质材料中的竞争解释交锋，并赢得一项
+有条件的判断。
+
+---
+
+## Stanford reference route | Stanford 参照路径
+
+When a live Stanford repository matches the verified artifact pattern, the four
+skills preserve its source hierarchy, paths, naming, and quality gates. Every
+nonmatching repository — including another Stanford course — derives those
+choices locally.
+当真实 Stanford 仓库命中经验证工件模式时，四个 skill 保留其来源层级、路径、命名与质量
+闸门；任何不匹配仓库——包括另一门 Stanford 课程——都从本地重新推导这些选择。
 
 | Skill | Reads · 读取内容 | Produces · 主要输出 |
 |---|---|---|
-| [`stanford-lecture-notes`](stanford-lecture-notes/SKILL.md) | Structured lecture sources and transcripts under `_0_Digital Lecture Notes`; completed child notes for a parent synthesis · `_0_Digital Lecture Notes` 中的结构化讲义与转录稿；父级综合读取已完成子笔记 | Lesson/Part notes or standalone Unit/Module syntheses under `_1_Module Summaries` · `_1_Module Summaries` 中的单课/Part 笔记或可独立复习的 Unit/Module 综合 |
-| [`stanford-assignment-guides`](stanford-assignment-guides/SKILL.md) | Authoritative assignment graph: rendered prompt, source files, scoring/metadata, submission rules, and starter interfaces · 权威作业图：渲染题面、源文件、计分/元数据、提交规则与 starter 接口 | `_2_Assignment Guides/A{N}_Assignment_Problems_Bilingual.md`, `A{N}_Assignment_Overview.md`, and `A{N}_Assignment_CN_Guide.md` · `_2_Assignment Guides` 下的双语题面、Overview 与中文 Guide |
-| [`stanford-assignment-analysis`](stanford-assignment-analysis/SKILL.md) | Validated prompt/guide and rubric plus the actual completed code, notebook, written, experiment, or report artifacts · 已验证题面/Guide 与 rubric，加真实完成的代码、Notebook、书面、实验或报告工件 | One evidence-linked analysis under `_3_Assignment analysis (课程详解CN帖子用)` · `_3_Assignment analysis (课程详解CN帖子用)` 下的一篇证据可追溯分析 |
-| [`stanford-assignment-visuals`](stanford-assignment-visuals/SKILL.md) | Assignment Analysis + Overview, or Unit/Module Analysis + matching Summary/Overview · Assignment Analysis＋Overview，或 Unit/Module Analysis＋匹配的 Summary/Overview | Overview and teaching-section PNGs in `_3_Assignment analysis (课程详解CN帖子用)/<work-id>_<title>/` · `_3_Assignment analysis (课程详解CN帖子用)/<work-id>_<title>/` 中的总览与分章 PNG |
+| [`stanford-lecture-notes`](stanford-lecture-notes/SKILL.md) | Structured lecture sources and transcripts under `_0_Digital Lecture Notes`; completed child notes for parent synthesis · `_0_Digital Lecture Notes` 中的结构化讲义、转录稿与已完成子笔记 | Lesson/Part notes or Unit/Module syntheses under `_1_Module Summaries` · `_1_Module Summaries` 中的单课/Part 笔记或 Unit/Module 综合 |
+| [`stanford-assignment-guides`](stanford-assignment-guides/SKILL.md) | Authoritative prompt graph, scoring/metadata, submission rules, starter interfaces · 权威题面图、计分/元数据、提交规则与 starter 接口 | Three verified views under `_2_Assignment Guides` · `_2_Assignment Guides` 下三份经验证视图 |
+| [`stanford-assignment-analysis`](stanford-assignment-analysis/SKILL.md) | Verified guide/rubric plus completed code, notebook, written, experiment, or report artifacts · 已验证 Guide/rubric 加真实完成工件 | Evidence-linked analysis under `_3_Assignment analysis (课程详解CN帖子用)` · `_3_Assignment analysis (课程详解CN帖子用)` 下的证据分析 |
+| [`stanford-assignment-visuals`](stanford-assignment-visuals/SKILL.md) | Analysis + matching Overview/Summary · Analysis 加匹配的 Overview/Summary | Overview and teaching-section PNGs beside the analysis · 分析目录内的总览与分章 PNG |
 
-The dependency order is strict: lecture sources → leaf notes → unit synthesis;
-assignment sources → bilingual source view → Overview → Chinese action guide;
-completed work + validated guides → analysis; analysis + matching overview/summary
-→ overview visual + section set.
-依赖顺序固定：讲义来源 → 叶级笔记 → 单元综合；作业来源 → 双语来源视图 → Overview → 中文
-行动 Guide；完成工件＋已验证 Guide → 分析；Analysis＋匹配的 Overview/Summary → 总览图＋分章组。
+The order is strict: source → verified intermediate artifact → downstream
+artifact. A downstream file never repairs an upstream omission by invention.
+顺序固定：来源 → 经验证中间工件 → 下游工件。下游文件不得用臆造修补上游缺口。
+
+---
+
+## Platform compatibility | 平台兼容
+
+The skills follow the open [Agent Skills specification](https://agentskills.io/specification).
+Install the same folder at the host's discovery path; only the path and explicit
+invocation syntax change.
+本库遵循开放的 [Agent Skills 规范](https://agentskills.io/specification)。把同一个文件夹
+放入宿主发现路径即可；变化的只是路径与显式调用语法。
+
+| Host | Project scope | User scope | Explicit invocation |
+|---|---|---|---|
+| [Cursor](https://cursor.com/docs/skills) | `.cursor/skills/<skill>/` or `.agents/skills/<skill>/` | `~/.cursor/skills/<skill>/` or `~/.agents/skills/<skill>/` | `/skill-name` |
+| [Codex](https://learn.chatgpt.com/docs/build-skills.md) | `.agents/skills/<skill>/` | `~/.agents/skills/<skill>/` | `$skill-name` |
+| [Claude Code](https://code.claude.com/docs/en/slash-commands) | `.claude/skills/<skill>/` | `~/.claude/skills/<skill>/` | `/skill-name` |
+
+Automatic activation is governed by `description`; explicit invocation remains
+the deterministic path when several skills are plausible.
+自动触发由 `description` 控制；多个 skill 都可能命中时，显式调用仍是确定路径。
+
+---
+
+## Runtime requirements | 运行要求
+
+| Scope | Required capability |
+|---|---|
+| Core writing, audit, notes, guides, analysis · 核心写作、审计、笔记、Guide、分析 | read and write Markdown; inspect the supplied repository and source files · 读写 Markdown；检查用户提供的仓库与来源 |
+| `vd-report-ingest` | PDF/image reading; project workflow may use Python 3.11+ and PyMuPDF · PDF/图片读取；项目工作流可能需要 Python 3.11+ 与 PyMuPDF |
+| `stanford-assignment-visuals` | raster image generation plus actual image inspection · 位图生成能力与实际图片检查能力 |
+| `vd-latex-render` | project `scripts/render_pdf.py`, pandoc 3.x, TeX Live, XeLaTeX, `ctexart` · 项目脚本、pandoc 3.x、TeX Live、XeLaTeX、`ctexart` |
+| Other project-bound stages · 其他项目绑定阶段 | the local scripts and artifact paths named by that skill · 对应 skill 点名的本地脚本与工件路径 |
+
+A missing capability blocks the stage that needs it. It does not authorize a
+silent substitute that changes the artifact contract.
+能力缺失会阻断需要它的阶段；这不授权悄悄换用会改变产物契约的替代方案。
 
 ---
 
 ## Layout | 目录
 
-Every skill folder has the same shape:
-每个 skill 文件夹同构：
-
+```text
+portable-agent-skills/
+├── README.md
+├── LICENSE
+└── <skill>/
+    ├── SKILL.md   # discovery metadata + task contract · 发现元数据＋任务契约
+    ├── logic.md   # causal workflow + evidence gates · 因果流程＋证据闸门
+    └── style.md   # documentation + output voices · 文档与输出声线
 ```
-<skill>/
-├── SKILL.md   # entry: name + description + overview · 入口
-├── logic.md   # the logic layer — argument / structure · 逻辑层（论证／结构）
-└── style.md   # the language layer · 语言层
-```
 
-
-| Path               | Role                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------ |
-| `<skill>/SKILL.md` | Entry Cursor loads; carries `name` + `description` · Cursor 加载的入口；含 `name` 与 `description` |
-| `<skill>/*.md`     | Optional detail, read on demand · 可选细节，按需读取                                                |
-
+`logic.md` and `style.md` are this catalog's authoring convention, not a limit of
+the Agent Skills format. A future skill may add `scripts/`, `references/`, or
+`assets/` inside its own folder when the task requires them.
+`logic.md` 与 `style.md` 是本目录的作者约定，不是 Agent Skills 格式边界。未来 skill 可在
+任务确有需要时，于自身目录加入 `scripts/`、`references/` 或 `assets/`。
 
 ---
 
-## Usage | 使用
+## Install | 安装
 
-A skill is active when its folder sits under a `skills/` directory Cursor reads.
-Copy the folder you need:
-将某个 skill 的文件夹放入 Cursor 读取的 `skills/` 目录，即生效。复制所需文件夹：
+Copy one complete skill folder; do not copy `SKILL.md` alone.
+复制完整 skill 文件夹；不要只复制 `SKILL.md`。
 
 ```bash
-# project scope · 项目级（仅当前仓库）
+# Cursor · project scope
 cp -r austere-analytical-prose <project>/.cursor/skills/
 
-# personal scope · 个人级（所有项目）
-cp -r austere-analytical-prose ~/.cursor/skills/
+# Codex · repository scope
+cp -r austere-analytical-prose <project>/.agents/skills/
+
+# Claude Code · project scope
+cp -r austere-analytical-prose <project>/.claude/skills/
 ```
 
-Cursor then applies the skill automatically when a task matches its
-`description`, or when you name it explicitly.
-随后 Cursor 会在任务命中其 `description` 时自动应用，或在你显式指名时应用。
+The folder name must match the `name` field. Relative links inside the skill must
+remain intact.
+文件夹名必须与 `name` 一致；skill 内部相对链接必须保持完整。
+
+---
+
+## Verify | 验证
+
+Validate structure with the Agent Skills reference validator, then test routing
+and one realistic task on every host you claim to support.
+先用 Agent Skills 参考校验器验证结构，再在每个声称支持的宿主上测试触发与一项真实任务。
+
+```bash
+skills-ref validate ./<skill>
+```
+
+| Gate | Required result |
+|---|---|
+| Shape · 形状 | one folder; `SKILL.md` present; referenced files resolve · 单一文件夹；`SKILL.md` 存在；引用文件可解析 |
+| Metadata · 元数据 | `name` matches folder; `description` is 1–1024 characters and states what + when · `name` 匹配目录；`description` 为 1–1024 字符并说明做什么＋何时用 |
+| Routing · 触发 | positive prompts activate; adjacent tasks do not collide · 正例触发；相邻任务不误撞 |
+| Forward test · 前向测试 | a fresh agent completes one raw task without leaked conclusions · 新 Agent 在无结论泄漏下完成原始任务 |
+| Runtime · 运行 | required tools exist; produced artifacts pass the skill's own QA · 所需工具存在；产物通过 skill 自身 QA |
+
+Validation proves the package is well formed. It does not prove an unsupported
+claim or a missing tool into existence.
+校验证明包的形状成立；它不会把无证据主张或缺失工具变成现实。
 
 ---
 
 ## Authoring | 新增 skill
 
-Add one folder with a `SKILL.md` whose front matter carries `name` (lowercase,
-hyphenated) and a `description` stating what the skill does and when to use it;
-keep the body concise and move detail into side files; then add one row to
-[Skills](#skills--技能).
-新增一个文件夹，内含 `SKILL.md`，其 front matter 含 `name`（小写、连字符）与
-`description`（说明做什么、何时用）；正文从简，细节移入子文件；然后在
-[技能索引](#skills--技能)加一行。
+1. Add one lowercase, hyphenated sibling folder. · 新增一个小写、连字符命名的同级目录。
+2. Write `SKILL.md` with `name` and a concise `description` stating what the skill does and when it triggers. · 写入 `name` 与简洁的“做什么＋何时触发”说明。
+3. Keep the task contract concise; place causal detail in `logic.md` and language rules in `style.md`. · 任务契约从简；因果细节进 `logic.md`，语言规则进 `style.md`。
+4. Declare real runtime dependencies; do not encode one host's tool name as a universal capability. · 声明真实运行依赖；不把单一宿主工具名写成通用能力。
+5. Validate, forward-test, then add one row to [Skills](#skills--技能). · 校验、前向测试，再向技能表加一行。
 
 ---
 
-## Documentation convention | 文档约定
+## Documentation law | 文档约定
 
-Every README and `SKILL.md` here shares one documentation format:
-本仓库每个 README 与 `SKILL.md` 共用一套文档格式：
+Every root README, `SKILL.md`, `logic.md`, and `style.md` follows one visible
+documentation law:
+每份根 README、`SKILL.md`、`logic.md` 与 `style.md` 共用一套可见文档纪律：
 
-1. Bilingual, English first, paired line by line. · 双语、英文在前、逐句配对。
-2. Bilingual section headers `## English | 中文`. · 双语小节标题。
-3. Tables or code blocks for any index, mapping, or layout. · 索引、映射、目录用表格或代码块。
-4. `---` between sections. · `---` 分节。
-5. Fixed lexical sets for graded table columns — declared once at the top, bare
-   words only, never emoji, never per-row improvisation. · 表格定级列用固定词面集——
-   表首声明一次，裸词承载，不用 emoji，不逐行起意。
+1. Bilingual, English first, paired passage by passage. · 双语、英文在前、逐段配对。
+2. Bilingual section headings: `## English | 中文`. · 双语小节标题。
+3. Tables map; code blocks show literal trees or commands; prose explains consequence. · 表格映射；代码块展示真实目录或命令；正文解释后果。
+4. `---` separates major sections. · `---` 分隔主要章节。
+5. Paths, fields, and fixed lexical sets remain literal; no emoji or per-row improvisation. · 路径、字段与固定词面保持字面一致；不用 emoji，不逐行起意。
+6. Documentation uses the austere voice; deliverables use the voice their task requires. · 文档使用冷峻体；交付物使用任务真正需要的声线。
 
-This is a documentation format, not a prose style — each skill defines its own
-voice (austere, plain, or otherwise).
-这是文档格式，不是行文风格——每个 skill 自定义其声音（冷峻、白话或其他）。
+This is one authorship system, not one repeated paragraph. Logic stays common;
+specialization remains real.
+这是一套作者系统，不是一段模板反复复制。逻辑保持同源；特化保持真实。
+
+---
+
+## Limits | 边界
+
+- Portability covers the skill format and method, not identical host tooling. · 可迁移性覆盖格式与方法，不保证宿主工具完全相同。
+- Institutional or brand reference profiles activate only on verified provenance or explicit user direction. · 机构或品牌参照 profile 只在来源经验证或用户明确指定时启用。
+- A skill may transform evidence; it may not fabricate evidence, quotations, sources, or certainty. · Skill 可以转换证据，不得捏造证据、引文、来源或确定性。
+- Third-party names identify compatibility or method provenance; they do not imply endorsement. · 第三方名称只标识兼容性或方法来源，不表示背书。
+
+These are boundaries, not omissions.
+这些是边界，不是遗漏。
 
 ---
 
@@ -191,11 +252,14 @@ UTF-8, no BOM. · UTF-8，无 BOM。
 
 ---
 
-## Note | 说明
+## License | 许可
 
-Each skill is a distilled method — a task protocol plus output rules, with
-portable examples — not a substitute for evidence. It works from material you
-provide or sources it can verify; it never fabricates evidence, quotations,
-sources, or certainty.
-每个 skill 是一套蒸馏后的方法——任务协议加输出规则，并配以可迁移范例——而非证据的
-替代品。它处理你提供或其能核验的材料；绝不捏造证据、引文、来源或确定性。
+Repository-authored skill instructions and documentation are MIT (see
+`LICENSE`). Referenced source materials and third-party marks remain with their
+respective owners.
+本仓库原创的 skill 指令与文档采用 MIT（见 `LICENSE`）；被引用的来源材料与第三方标识仍归
+各自权利人所有。
+
+---
+
+*One method, many hosts. The host supplies tools; the skill supplies the standard. · 一套方法，多种宿主。宿主提供工具；Skill 守住标准。*
