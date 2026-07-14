@@ -152,3 +152,9 @@ translation: professional human-quality retranslation
 extraction_style: equity research - bilingual parallel text with structural markup
 ---
 ```
+
+The `translation` value above is a legacy compatibility status. It identifies
+the agent-authored retranslation stage; it does not certify human authorship,
+human review, or independently measured translation quality.
+上面的 `translation` 值是既有兼容性状态，只标记 agent 重译阶段；它不证明人工撰写、
+人工审校或经独立测量的翻译质量。

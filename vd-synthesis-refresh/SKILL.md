@@ -15,11 +15,12 @@ description: >-
 
 ## What this is | 这是什么
 
-In one line: **three optional outputs — index, cross-report audit, rolling
-window — each stamped with `generated_at`, each advancing by causal chains and
-theme-level conflict pairs, closing on falsifiable checks rather than mood.**
-一句话：**三种可选输出——索引、跨报告审计、滚动窗口——均带 `generated_at`，
-均以因果链与主题级冲突对推进，以可证伪检验而非情绪收束。**
+In one line: **three optional outputs — a compiled index, a cross-report audit,
+and a rolling window. All carry `generated_at`; only the two interpretive outputs
+advance by causal chains and theme-level conflict pairs, closing on falsifiable
+checks rather than mood.**
+一句话：**三种可选输出——编译索引、跨报告审计与滚动窗口。三者均带 `generated_at`；
+只有两种解读性输出以因果链与主题级冲突对推进，并以可证伪检验而非情绪收束。**
 
 Its opposite is a one-shot "market recap": themes listed in parallel, conflicts
 unnamed, no timestamp, no diff against last week's file — readable once,
@@ -35,7 +36,7 @@ source, probabilities declared as working assumptions — restraint over noise.
 
 ---
 
-## Style fingerprint | 风格指纹（八项，与 logic.md 八步一一对应）
+## Style fingerprint (eight items: 1–2 for A/B/C; 3–8 for B/C only) | 风格指纹（八项：1–2 适用于 A/B/C；3–8 仅适用于 B/C）
 
 1. **Bound corpus first** — declare `date_range`, report count, and
    `generated_at` before any interpretive claim.
@@ -71,17 +72,20 @@ source, probabilities declared as working assumptions — restraint over noise.
 ## How to use | 怎么用
 
 **Refreshing fresh** — state which mode(s): A (index), B (audit), C (rolling
-window). Read [logic.md](logic.md) for advance order, then write per
-[style.md](style.md): skill docs in Voice A; `synthesis/*.md` body in Voice B.
+window). Read [logic.md](logic.md) for advance order. Mode A stops at the compiled
+index emitted by `scripts/index.py`; for modes B and C, write the interpretive
+body per [style.md](style.md) in Voice B. Skill documentation remains Voice A.
 **新刷新**——声明模式：A（索引）、B（审计）、C（滚动窗口）。先读 [logic.md](logic.md)
-定顺序，再依 [style.md](style.md) 写：skill 文档用 Voice A；`synthesis/*.md`
-正文用 Voice B。
+定顺序。模式 A 止于 `scripts/index.py` 生成的编译索引；模式 B、C 的解读正文再按
+[style.md](style.md) 使用 Voice B。Skill 文档仍用 Voice A。
 
-**Polishing existing synthesis** — first apply Voice B habits (overview, mechanism
-chains, table recaps), then check chain logic per [logic.md](logic.md) for
-missing falsifiers or timestamp drift.
-**润色已有综合稿**——先套 Voice B 习惯（概览、机制链、表后收束），再按 [logic.md](logic.md)
-检查是否缺证伪或时间戳过期。
+**Polishing existing output** — regenerate Mode A with `scripts/index.py`; do not
+hand-polish the compiled index. For modes B and C, first apply Voice B habits
+(overview, mechanism chains, table recaps), then check chain logic per
+[logic.md](logic.md) for missing falsifiers or timestamp drift.
+**润色已有输出**——模式 A 用 `scripts/index.py` 重生成，不手工润色编译索引。模式 B、C
+先套 Voice B 习惯（概览、机制链、表后收束），再按 [logic.md](logic.md) 检查是否缺证伪
+或时间戳过期。
 
 | Mode · 模式 | Action · 动作 | Output · 输出 |
 | --- | --- | --- |

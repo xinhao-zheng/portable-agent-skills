@@ -28,27 +28,28 @@ Resolve the work item before display or naming:
 
 Derive course code, course title, work type, ID, and local unit vocabulary from
 metadata. With a verified code, display `Stanford <course-code> <work-label>`;
-without one, display `<verified Stanford course title> · <work-label>`. Labels are
-Chinese-first, with English retained only for necessary terms.
+without one, display `<verified Stanford course title> · <work-label>`. Display
+labels follow the verified source convention and target language; under the
+reference defaults they are Chinese-first, with English retained only for
+necessary terms.
 从元数据推导课程代码、课程名、工作类型、ID 与本地单元词汇。有经验证代码时展示
 `Stanford <course-code> <work-label>`；无代码时展示
-`<经验证 Stanford 课程全名> · <work-label>`。标签中文为主，只保留必要英文术语。
+`<经验证 Stanford 课程全名> · <work-label>`。展示标签服从经验证的来源约定与目标语言；
+采用参照默认时以中文为主，只保留必要英文术语。
 
 When the profile is active, apply the inheritance priority in step 5. Only when
 neither a coherent live target-course set nor a completed reference anchor exists,
-apply the reference defaults: horizontal 16:9; warm off-white `#F5F4F0`; dark navy
-`#1e293b`; royal blue `#1d4ed8`; light gray `#e2e8f0`; at most one additional
-shared semantic color. Save under the matching live `_3_...` subfolder using the
-detected source-workflow pattern and these defined tokens:
+apply the single set of reference defaults declared in [style.md](style.md) under
+“Stanford reference defaults.” Save under the matching live `_3_...` subfolder
+using the detected source-workflow pattern and these defined tokens:
 profile 启用时执行第 5 步的继承优先级。只有既无目标课程一致的真实视觉组，也无已完成参照
-锚点时，才采用参照默认：横版 16:9；暖灰白 `#F5F4F0`；深蓝 `#1e293b`；皇家蓝
-`#1d4ed8`；浅灰 `#e2e8f0`；至多再加一种全组共用语义色。保存到匹配的真实 `_3_...`
-子目录，沿用检测到的源工作流模式与下列 token：
+锚点时，才采用 [style.md](style.md)“Stanford 参照默认”中唯一声明的默认集合。保存到
+匹配的真实 `_3_...` 子目录，沿用检测到的源工作流模式与下列 token：
 
 | Token · 记号 | Meaning · 含义 |
 |---|---|
 | `<work-id>` | verified `A{N}`, `M{N}`, or local equivalent · 经验证的 `A{N}`、`M{N}` 或本地等价 ID |
-| `M{NN}` | `M` + two-digit teaching-section sequence · `M`＋两位教学章节序号 |
+| `M{NN}` | section token: literal `M` + zero-padded two-digit teaching-section sequence (for example `M01`); distinct from `<work-id>` even when that ID also begins with `M` · 章节 token：字面量 `M`＋补零后的两位教学章节序号（如 `M01`）；即使 `<work-id>` 也以 `M` 开头，两者角色仍不同 |
 | `<slug>` | stable lowercase section slug · 稳定小写章节 slug |
 | `<course-key>` | verified course code; otherwise stable course slug · 经验证课程代码；否则稳定课程 slug |
 

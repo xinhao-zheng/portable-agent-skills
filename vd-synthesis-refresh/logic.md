@@ -55,8 +55,9 @@ else need be said.
    still leaves with consensus, new friction, and what to watch.
    **概览先行**——开头 200 字内放 30 秒引用块或一分钟速查表。读者只读第一屏
    仍带走共识、新摩擦、待观察项。
-   - Mode A: timeline table + carry-away count.
-     模式 A：时间线表 + 条数带走句。
+   - Mode A has already stopped at step 2; its timeline table is the compiled
+     output, not a separate interpretive overview gate.
+     模式 A 已在第 2 步结束；时间线表就是编译输出，不另设解读性概览闸门。
    - Mode B: one-line thesis + theme stance table.
      模式 B：一句话主线 + 主题态度表。
    - Mode C: window lookup table (theme | stance | vs baseline | key number | confidence).
@@ -127,25 +128,33 @@ else need be said.
 | Step · 步骤 | Mode A · 索引 | Mode B · 审计 | Mode C · 滚动窗口 |
 | --- | --- | --- | --- |
 | 1 Bound corpus · 界定语料 | ✓ | ✓ | ✓ + `window`, `baseline` |
-| 2 Index · 索引 | ✓ (only output) | read index / summaries | read index / summaries |
-| 3 Overview · 概览 | timeline table | thesis + theme table | window lookup table |
+| 2 Index · 索引 | ✓ (only output · 唯一输出) | read index / summaries | read index / summaries |
+| 3 Overview · 概览 | — (timeline emitted at step 2 · 时间线已在第 2 步生成) | thesis + theme table | window lookup table |
 | 4–5 Chain + conflicts · 链与冲突 | — | §1–§7 theme chain | §2–§4 bull/bear mechanisms |
 | 6 Mechanisms · 机制 | — | per conflict | per window claim |
 | 7 Limits + probs · 局限与概率 | — | §8 false consensus | §6 BEAR/BASE/BULL |
-| 8 Coda · 收束 | footer timestamp | §9 one line | §9 one line |
+| 8 Coda · 收束 | — (footer, if any, emitted at step 2 · 若有 footer，由第 2 步生成) | §9 one line | §9 one line |
 
 **Rolling window file rule:** `synthesis/rolling-window-YYYYMMDD-YYYYMMDD.md` —
 do not delete prior windows; add new files so `generated_at` diffs remain readable.
 **滚动窗口文件规则：** 不删旧窗口；新增文件，使 `generated_at` diff 可读。
 
 **Cross-mode gates · 跨模式闸门:**
-- Index `reports:` == audit `reports_audited` == window `total_corpus`.
-- Audit §0 one-liner must not contradict window §9 coda without explicit reconciliation.
-- File-index tables use English paths only: `source-pdfs/`, `bilingual-transcripts/`, etc.
+- Index `reports:` == audit `reports_audited` == window `total_corpus`. · 索引
+  `reports:`、审计 `reports_audited` 与窗口 `total_corpus` 必须相等。
+- Audit §0 one-liner must not contradict window §9 coda without explicit
+  reconciliation. · 审计 §0 主线不得与窗口 §9 收束矛盾；若有变化，须显式对账。
+- File-index tables use English paths only: `source-pdfs/`,
+  `bilingual-transcripts/`, etc. · 文件索引表只使用英文路径，如 `source-pdfs/`、
+  `bilingual-transcripts/`。
 
 ---
 
 ## Self-check | 自检清单
+
+Apply timestamp and count checks to A/B/C; apply overview, chain, conflict,
+mechanism, probability, and coda checks only to B/C.
+时间戳与数量对账适用于 A/B/C；概览、链、冲突、机制、概率与收束检查仅适用于 B/C。
 
 - [ ] Is `generated_at` the real wall-clock UTC (not `12:00:00Z`, not reused) on every touched file, and repeated in the body header? |
       每个改动过的文件，`generated_at` 是否为真实 UTC 墙钟（非 `12:00:00Z`、非沿用旧值），并在正文头重复？

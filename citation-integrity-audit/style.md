@@ -29,11 +29,14 @@ counter-example (✗).
    - ✓ `https://doi.org/10.1109/SP.2014.36` · `https://eprint.iacr.org/2020/543`
    - ✗ *(see their paper)* · *(Google it)* — 见其论文／自行搜索
 
-3. **Set source against paper, in both editions.** Place the source sentence
-   (original + translation) next to the paper's own wording in each language
-   edition; the columns let the match be read line by line, not taken on faith.
-   **来源与论文并置，且双稿并载**。把被引原句（原文＋译文）紧挨论文各语种版本的
-   措辞放置；列与列之间让吻合被逐行读出，而非被采信。
+3. **Set source against every available paper edition.** Place the source
+   sentence (original + translation) next to the paper's exact wording in every
+   supplied or authoritatively available edition. If only one edition exists,
+   quote one and do not manufacture another; the columns let the match be read
+   line by line, not taken on faith.
+   **来源与论文现有各稿并置**。把被引原句（原文＋译文）紧挨论文已提供或可权威取得的
+   各语种版本措辞放置。仅有一版时只引该版，不补造另一版；列与列之间让吻合被逐行
+   读出，而非被采信。
 
 4. **Carry full identity once.** Title, authors, venue, year, pages — stated in
    the row itself, so the reader need not leave it to verify who and where.
@@ -44,15 +47,16 @@ counter-example (✗).
 
 ## Verdicts | 判定
 
-5. **A fixed verdict set, declared before the first row.** Grade on a small
-   closed set of bare words — the austere table states a cell as *native / none /
-   advisory*. Define the set once, at the top; never improvise a label per row,
-   and let the word's meaning carry the weight.
-   **固定的判定集，于首行之前声明**。用一个小型闭集的裸词来定级——冷峻表格把一格
-   写成"原生／无／仅建议"。该集合于表首一次定清；不逐行临时起意，让词义承重。
-   - ✓ a verdict column reading *match · true-but-misplaced · match-but-non-primary*,
-     each defined once at the top.
-     判定列写作"吻合 · 真实但落点偏移 · 吻合但来源非一手"，于表首各定义一次。
+5. **Three fixed verdict sets, declared before the first row.** Each row carries
+   three separate cells: `existence` = `confirmed | metadata-conflict |
+   unresolved`; `content-match` = `match | partial | mismatch |
+   not-assessable`; `placement` = `well-placed | misplaced | not-assessable`.
+   Define each set once; never improvise or combine labels per row.
+   **三套固定判定集，于首行之前声明**。每行使用三个独立单元格：`存在`＝`确认｜
+   元数据冲突｜未解析`；`内容吻合`＝`吻合｜部分吻合｜不吻合｜不可判`；`落点`＝
+   `落点合理｜落点偏移｜不可判`。各集合于表首一次定清；不得逐行临时起意或合并标签。
+   - ✓ `confirmed | match | misplaced` — one value per axis, no composite label.
+     `确认｜吻合｜落点偏移`——每轴一值，无复合标签。
    - ✗ *an undeclared scale that drifts from row to row.*
      一套未声明、逐行漂移的刻度。
 
@@ -62,9 +66,9 @@ counter-example (✗).
    **判定"定位"，不"赞美"**。陈述吻合，或点名缺口；不用"优秀／完美／无瑕"拔高。
    强调来自吻合本身，而非形容词。
    - ✗ *perfectly and excellently matched* — 完美且优秀地吻合
-   - ✓ *source states X; paper says X — match* · *true, but the source treats
-     capability, not hazard — mis-placed.*
-     来源陈述 X；论文说 X——吻合 · 真实，但来源讲的是能力而非危害——落点错。
+   - ✓ *`confirmed | match | misplaced`; note: `the source treats capability,
+     not hazard`.*
+     `确认｜吻合｜落点偏移`；备注：`来源讨论的是能力，而非危害`。
 
 7. **Name the residue precisely; candor over reassurance.** Not "slightly off"
    but the exact nuance — what is simplified, mis-placed, or non-primary, and
@@ -88,10 +92,11 @@ counter-example (✗).
 9. **Separate the axes; never collapse them.** Existence (is it real?), match
    (does the source say it?), and placement (is it under the right claim?) are
    three verdicts, not one — a source can pass two and fail the third, and the
-   row must show which.
+   row must show which. Write `true-but-misplaced` as `confirmed | match |
+   misplaced`, never as one composite label.
    **分轴，绝不合并**。存在（是否真实？）、吻合（来源是否如是说？）、落点（是否
    落在对的主张下？）是三项判定而非一项——一条来源可过其二、败其一，行中须显示
-   败在哪一轴。
+   败在哪一轴。将 `true-but-misplaced` 拆为 `确认｜吻合｜落点偏移`，不得保留复合标签。
 
 10. **State method, not sentiment.** Use "我们" for the act of auditing —
     *resolved, extracted, confronted, graded*; use "本表 / 本台账" to frame the
@@ -107,9 +112,9 @@ counter-example (✗).
    把每处对来源的转述换成其逐字原句（＋译文）。
 2. Add a resolvable primary-source link to every row that lacks one. |
    给每个缺链接的行补上一手来源的可解析链接。
-3. Reduce all verdicts to the fixed set; strip "perfect / excellent / strong". |
-   把所有判定收敛到固定集合；删去"完美／优秀／强有力"。
-4. Split any row that fuses existence / match / placement into the three axes. |
-   把任何熔合"存在／吻合／落点"的行拆成三轴。
+3. Reduce each verdict column to its own declared set; strip "perfect / excellent /
+   strong". | 把每个判定列收敛到各自声明的集合；删去"完美／优秀／强有力"。
+4. Split every composite label into `existence | content-match | placement`. |
+   把每个复合标签拆成`存在｜内容吻合｜落点`三轴。
 5. Reread: does any row still ask to be trusted rather than re-checked? Fix it. |
    通读：是否还有行在要求被采信、而非被复核？改之。

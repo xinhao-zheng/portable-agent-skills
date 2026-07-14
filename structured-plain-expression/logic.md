@@ -2,10 +2,10 @@
 
 The advance order of a structured plain-language research post. The illustrations
 draw on one quant case for concreteness; the skeleton is field-independent — it
-holds for any data-backed study: an experiment report, a benchmark review, a
-market post-mortem.
+holds for any multi-figure, data-backed study whose evidence can advance figure
+by figure: an experiment report, a benchmark review, a market post-mortem.
 本文件给出结构化白话研究帖的推进顺序。范例取自同一个量化案例以求具体；骨架与领域
-无关——任何有数据支撑的研究皆适用：实验报告、基准测评、行情复盘。
+无关——适用于任何能以多张图表逐图推进证据的数据研究：实验报告、基准测评、行情复盘。
 
 ---
 

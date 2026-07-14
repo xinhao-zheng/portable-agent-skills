@@ -40,14 +40,14 @@ or `report-summaries/`.
    （`window`/`date_range`、`generated_at`、`note`）。只映射源文承载之物——绝不臆造
    数字、日期或作者。
 
-4. **Structure-preserving conversion** — pandoc maps headings, lists, tables,
-   blockquotes, bold, em-dash 1:1 into LaTeX. The PDF carries the same skeleton as
-   the markdown: nothing added, nothing dropped, prose never rewritten. Section
-   numbering stays off — bodies that already read "一、二、三" must not gain a
-   second machine number.
-   **结构保真转换**——pandoc 把标题、列表、表格、引用、粗体、破折号一比一映射为 LaTeX。
-   PDF 与 markdown 同骨架：不增、不删、不改写正文。章节编号关闭——正文已写"一、二、三"者
-   不得再叠加机器编号。
+4. **Structure-preserving conversion** — pandoc carries supported headings,
+   lists, tables, blockquotes, bold, and em dashes into LaTeX. Apart from the
+   declared title-block and typesetting transformations, the rendered document
+   preserves the source prose and structural order. Section numbering stays off —
+   bodies that already read "一、二、三" must not gain a second machine number.
+   **结构保真转换**——pandoc 将其支持的标题、列表、表格、引用、粗体与破折号转换为
+   LaTeX。除已声明的标题块与排版变换外，渲染文档保留源文正文及结构顺序。章节编号
+   关闭——正文已写"一、二、三"者不得再叠加机器编号。
 
 5. **Austere brand typography** — pure black on white; generous margins; the
    `VERTEX DIMENSION` wordmark in the running head; a thin rule under the title;
@@ -58,13 +58,13 @@ or `report-summaries/`.
    段落不缩进、行距适中；零彩色、零纹饰。配图经 `\graphicspath` 从 `figures/` 解析；
    拉丁字体缺失的符号（→ × ≈ ≥ ≤ ↑ ↓）路由到数学字形，确保不掉字。
 
-6. **Deterministic compile** — `scripts/render_pdf.py` runs pandoc → `.tex`, then
+6. **Scripted compile** — `scripts/render_pdf.py` runs pandoc → `.tex`, then
    XeLaTeX twice from inside `latex/` (so `figures/` resolves and the running head
-   settles), then deletes aux files (`.aux .log .out .toc .fls …`). Re-running on
-   an unchanged source yields the same PDF.
-   **确定性编译**——`scripts/render_pdf.py` 跑 pandoc → `.tex`，再在 `latex/` 内
-   XeLaTeX 两遍（使 `figures/` 解析、页眉稳定），随后删除 aux 文件。源未变则重跑产出
-   同一 PDF。
+   settles), then deletes aux files (`.aux .log .out .toc .fls …`). Re-running an
+   unchanged source follows the same toolchain and overwrites the same output pair.
+   **脚本化编译**——`scripts/render_pdf.py` 跑 pandoc → `.tex`，再在 `latex/` 内
+   XeLaTeX 两遍（使 `figures/` 解析、页眉稳定），随后删除 aux 文件。源未变时重跑沿用
+   同一工具链，并覆盖同一对输出路径。
 
 7. **Falsifiable build gate** — success is observable: the `.pdf` exists with
    pages > 0. A failed compile prints the last ~30 lines of the `.log` and stops;
@@ -108,8 +108,9 @@ Tables (synthesis) rely on pandoc's `booktabs`/`longtable` output; wide tables g
       是否用 XeLaTeX + ctexart（非 pdflatex）编译，中文正常、无掉字？
 - [ ] Title from the first H1, date line from YAML — no invented metadata? |
       标题取首个 H1、日期行来自 YAML——无臆造元数据？
-- [ ] Does the PDF carry the same skeleton as the md (nothing added or dropped, prose unaltered)? |
-      PDF 是否与 md 同骨架（不增不删、正文未改）？
+- [ ] Apart from the declared title-block/typesetting transformations, does the
+      rendered document preserve the source prose and supported structural order? |
+      除已声明的标题块与排版变换外，渲染文档是否保留源文正文与受支持的结构顺序？
 - [ ] No double section numbering when the body already reads "一、二、三"? |
       正文已是"一、二、三"时是否无重复章节编号？
 - [ ] Monochrome, wordmark head, figures from `figures/` — brand typography held? |

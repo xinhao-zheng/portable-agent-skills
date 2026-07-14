@@ -3,15 +3,17 @@ name: stanford-assignment-guides
 description: >-
   Apply the Stanford-derived assignment-guide method to build three views of one
   closed assignment model: complete bilingual problems, a knowledge overview,
-  and a graded-unit Chinese action guide. Reconcile source, scoring, metadata,
-  and submission rules; preserve requirements; add no solutions. The original
-  Stanford source workflow is the reference profile; it activates only on an
-  artifact-pattern match. PDF, Markdown, LaTeX, LMS, notebook, and other layouts
-  adapt through local source discovery. 采用源自 Stanford 的作业 Guide 方法，为同一个闭合
+  and a Chinese action guide organized by the smallest graded unit. Reconcile
+  source, scoring, metadata, and submission rules; preserve all requirements;
+  add no solutions.
+  The original Stanford source workflow is the reference profile; it activates
+  only on an artifact-pattern match. Other repositories, including those for
+  other Stanford courses, adapt through local discovery of PDF, Markdown, LaTeX,
+  LMS, notebook, and other source layouts. 采用源自 Stanford 的作业 Guide 方法，为同一个闭合
   作业模型建立三种视图：完整双语题面、知识概述与最小计分单元中文行动指南。对账来源、
-  计分、元数据与提交规则；保留全部要求，不新增答案。原 Stanford 源工作流只在工件模式
-  匹配时启用参照 profile；PDF、Markdown、LaTeX、LMS、Notebook 及其他布局均通过本地
-  来源发现适配，包括另一门 Stanford 课程。Use when Assignment Reference,
+  计分、元数据与提交规则；保留全部要求，不新增答案。原 Stanford 源工作流是参照 profile；
+  仅在工件模式匹配时启用。其他仓库——包括另一门 Stanford 课程——均通过本地来源发现，
+  适配 PDF、Markdown、LaTeX、LMS、Notebook 及其他布局。Use when Assignment Reference,
   bilingual problem set, assignment overview, 中文 Guide, 做题前速查, or 题面翻译.
 ---
 

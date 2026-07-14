@@ -39,7 +39,7 @@ sentence stress, honesty over rhetoric. Most rules carry ✓ and ✗.
 
 ---
 
-## Voice B — Synthesis output (`synthesis/*.md`) | 综合研判正文
+## Voice B — Interpretive synthesis output (modes B/C only) | 解读性综合研判正文（仅模式 B/C）
 
 Structured plain expression — embedded here; **never cite another skill by name
 in the synthesis file itself.**
@@ -137,7 +137,7 @@ in the synthesis file itself.**
 15. **No emoji** — navigation by headings, numbers, and tables only.
     **无 emoji**——导航靠标题、编号、表格。
 
-### One-pass clean (synthesis body) | 一键清洗（综合正文）
+### One-pass clean (interpretive synthesis body, modes B/C) | 一键清洗（解读性综合正文，仅 B/C）
 
 1. Hoist 30-second blockquote to first screen. | 30 秒块提到第一屏。
 2. Turn parallel theme prose into tables + one-line recap. | 平行主题散文改表 + 一句收束。

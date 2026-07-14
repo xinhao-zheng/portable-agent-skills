@@ -43,10 +43,12 @@ empirical study, a position piece, or a technical standard alike.
 
 5. **Confront, verbatim and bilingual** — set the source sentence beside the
    paper's own wording; quote both, summarize neither. The match becomes something
-   the reader sees rather than something the audit asserts. For a bilingual paper,
-   carry both language editions.
+   the reader sees rather than something the audit asserts. Carry every supplied
+   or authoritatively available language edition; if only one is available, quote
+   that edition alone and do not manufacture another.
    **逐字且双语地对质**——把被引原句与论文自身措辞并置；两者皆逐字引用，皆不转述。
-   吻合于是成为读者"看到"之物，而非核查"宣称"之物。论文若有双语稿，则两版并载。
+   吻合于是成为读者"看到"之物，而非核查"宣称"之物。载入已提供或可权威取得的各语种
+   版本；仅有一版时只引该版，不补造另一版。
 
 6. **Test placement** — ask whether the citation sits under the claim that needs
    it. A real, well-matched source filed under the wrong sentence is a defect of
@@ -68,17 +70,20 @@ empirical study, a position piece, or a technical standard alike.
    在"可被复核"之上——这恰是它施于论文的同一条纪律。无法被复核的核查，不过是又一
    句断言。
 
-8. **Grade, then state the residue** — assign one verdict from a fixed lexical
-   set (match / true-but-misplaced / match-but-non-primary), write a named note
-   for every nuance, and close with what stays unresolved. The audit earns trust
-   by marking its own soft spots, not by clearing every row.
-   **定级，再陈残差**——给一个取自固定词面集的判定（吻合／真实但落点偏移／吻合但
-   来源非一手），每处微妙之处写一条点名备注，并以"尚未解决者"收束。核查靠标出自身
-   软肋赢得信任，而非靠让每一行都过关。
-   - e.g. *one row true but mis-placed (flag it); one row matched but the source
-     is a non-peer-reviewed project doc (label it); the rest a plain match.*
-     范例："一行真实但落点错（标出）；一行吻合但来源为未经同行评审的项目文档
-     （标注）；其余记'吻合'。"
+8. **Grade three axes, then state the residue** — assign one independent verdict
+   to each axis from the declared sets: `existence` = `confirmed |
+   metadata-conflict | unresolved`; `content-match` = `match | partial |
+   mismatch | not-assessable`; `placement` = `well-placed | misplaced |
+   not-assessable`. Put source-type nuances and other residue in `notes`; never
+   fuse two axes into one label. The audit earns trust by marking its own soft
+   spots, not by clearing every row.
+   **三轴定级，再陈残差**——每条轴各给一个独立判定：`存在`＝`确认｜元数据冲突｜
+   未解析`；`内容吻合`＝`吻合｜部分吻合｜不吻合｜不可判`；`落点`＝`落点合理｜
+   落点偏移｜不可判`。来源类型等细节写入 `notes`；不得把两条轴熔成一个标签。核查
+   靠标出自身软肋赢得信任，而非靠让每一行都过关。
+   - e.g. *`confirmed | match | misplaced`; note: `source type:
+     non-peer-reviewed project documentation`.*
+     范例：*`确认｜吻合｜落点偏移`；备注：`来源类型：未经同行评审的项目文档`。*
 
 ---
 
@@ -95,8 +100,9 @@ empirical study, a position piece, or a technical standard alike.
       每件作品是否在判其内容前已解析到一手或权威记录？
 - [ ] Is the evidence a verbatim source sentence, never a paraphrase? |
       证据是否为逐字被引原句，而非转述？
-- [ ] Is the source sentence set against the paper's own wording, bilingually? |
-      被引原句是否与论文自身措辞双语并置？
+- [ ] Is the source sentence (original + translation) set against every available
+      paper edition, without a manufactured edition? |
+      被引原句（原文＋译文）是否与论文现有各稿并置，且未补造版本？
 - [ ] Are existence, content-match, and placement kept as three separate axes? |
       存在、内容吻合、落点是否保持为三条独立轴？
 - [ ] Does every row carry a resolvable link to the primary source? |

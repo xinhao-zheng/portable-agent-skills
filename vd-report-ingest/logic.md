@@ -101,9 +101,12 @@ domain-neutral where possible; the path names are fixed for vd-research.
    **解读产出用 agent token**——重译（填 EN/ZH 块）与 `-Summary.md` 由 agent 对照
    `*-Bilingual.md` 执笔，消耗操作者 agent token；`scripts/ingest.py` 只逐字提取并
    scaffold 空块——不替代 agent 步骤。Google 免费机翻或第三方 OCR 插件不是可交付终态。
-   - e.g. Agent reads `*-Bilingual.md`, writes the summary, fills empty EN/ZH blocks,
-     marks `translation: professional human-quality retranslation`.
-     范例：Agent 读 `*-Bilingual.md`、写摘要、填空块，并标 `professional human-quality retranslation`。
+   - e.g. Agent reads `*-Bilingual.md`, writes the summary, fills empty EN/ZH
+     blocks, and retains the legacy compatibility value `translation:
+     professional human-quality retranslation`; the value identifies this stage
+     and does not certify human review.
+     范例：Agent 读 `*-Bilingual.md`、写摘要、填空块，并保留既有兼容性状态值；该值
+     标记 agent 重译阶段，不构成人工审校证明。
    - Anti-pattern: `deep_translator.GoogleTranslator` (or any free MT) as the final
      bilingual or summary text; batch-summarizing via an external MT script.
      反模式：以 Google 免费机翻作为双语/摘要终态；用外部 MT 脚本批量生成摘要。
@@ -137,8 +140,8 @@ agent 读图。转写为分页块 → 同一元数据 schema → 标
       slug 是否承载完整标题（未在点号处截断为 `YYYYMMDD_<n>`）？
 - [ ] Was extract run before summary, with page markers on every body page? |
       是否在摘要前先提取，且每个正文页有页标记？
-- [ ] Does published bilingual MD carry `professional human-quality retranslation`? |
-      发布的双语 MD 是否标注专业人工重译？
+- [ ] Does published bilingual MD retain the legacy compatibility value without treating it as proof of human review? |
+      发布的双语 MD 是否保留既有兼容性状态值，且未把它当作人工审校证明？
 - [ ] Does every summary claim map to a page in the bilingual file? |
       摘要每条主张是否可映射到双语文件某页？
 - [ ] Is `stance` derived from mechanism, not headline mood alone? |

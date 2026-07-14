@@ -2,10 +2,10 @@
 name: vd-report-ingest
 description: >-
   Ingest a new equity-research PDF, markdown, or image into the vd-research
-  pipeline — extract pages, build bilingual transcript, professional
+  pipeline — extract pages, build bilingual transcript, agent-authored
   retranslation, and per-report summary. Self-contained: carries its own skill-doc
   voice rules and summary-output rules; no other skill need be loaded. 将新 PDF、
-  Markdown 或图片研报入库：分页提取、生成双语文稿、专业重译、单篇白话摘要。
+  Markdown 或图片研报入库：分页提取、生成双语文稿、由 agent 对照来源重译、单篇白话摘要。
   自洽完整：内含 skill 文档文体与摘要输出文体；无需加载其他 skill。Use when the
   user drops a new report file, asks to 入库/提取/翻译/摘要 a new PDF or image, or
   says "new report arrived" for this research project.
@@ -69,10 +69,13 @@ this stage's only job.
    **摘要命题化**——一句话结论可检验（*谁因何机制在何窗口受益*）；`stance`
    跟随正文因果链，不单跟标题情绪词。
 6. **Evidence by stage** — one table maps each stage to its named artifact and
-   gate; published bilingual MD carries `translation: professional human-quality
-   retranslation` — raw MT is not a shippable final state.
-   **分阶段证据对照**——一张表把每步映射到具名工件与闸门；发布的双语 MD 标注
-   `professional human-quality retranslation`——机器直译不是可交付终态。
+   gate. Published bilingual MD retains the legacy compatibility value
+   `translation: professional human-quality retranslation`; it marks the
+   agent-authored retranslation stage, not human authorship, human review, or an
+   independently measured quality result. Raw MT is not a shippable final state.
+   **分阶段证据对照**——一张表把每步映射到具名工件与闸门。发布的双语 MD 保留兼容性
+   状态值 `translation: professional human-quality retranslation`；它只标记 agent
+   重译阶段，不证明人工撰写、人工审校或经独立测量的翻译质量。机器直译不是可交付终态。
 7. **Named falsifiers** — each summary closes with one observable that would
    break its one-line conclusion; a thin OCR/scan extraction carries an explicit
    confidence caveat.

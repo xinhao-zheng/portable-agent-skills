@@ -18,16 +18,16 @@ description: >-
 
 ## What this is | 这是什么
 
-In one line: **a deterministic typesetting stage that turns a finished markdown
+In one line: **a scripted typesetting stage that turns a finished markdown
 document into a brand LaTeX source and a compiled PDF — the `.tex` is the audit
 artifact, the `.pdf` its compile, both named by slug under `latex/`.**
-一句话：**一个确定性的排版阶段，把已完成的 markdown 文档变成品牌 LaTeX 源与编译出的
+一句话：**一个脚本化的排版阶段，把已完成的 markdown 文档变成品牌 LaTeX 源与编译出的
 PDF——`.tex` 是审计工件，`.pdf` 是其编译产物，二者以 slug 命名置于 `latex/`。**
 
 Its opposite is ad-hoc "export to PDF": print-to-PDF from an editor, no source
-kept, no brand, no reproducible build. The page looks fine once and cannot be
+kept, no brand, no retained rebuild path. The page looks fine once and cannot be
 regenerated or audited.
-它的反面是临时"导出 PDF"：从编辑器打印成 PDF，不留源、无品牌、不可复现。看一眼还行，
+它的反面是临时"导出 PDF"：从编辑器打印成 PDF，不留源、无品牌、不留可重建路径。看一眼还行，
 既不能重生成、也无法审计。
 
 In Vertex Dimension's terms: the analysis is already done — modeled, priced,
@@ -53,21 +53,22 @@ allocated. Typesetting is the last mile: it gives a finished judgment the firm's
    never invent metadata the source lacks.
    **元数据 → 标题块**——标题取文档首个 H1；日期行由 YAML 组成（`window`/`date_range`、
    `generated_at`、`note`）；绝不臆造源文没有的元数据。
-4. **Structure-preserving conversion** — headings, lists, tables, blockquotes,
-   bold, em-dash map 1:1 via pandoc; the PDF carries the same skeleton as the md —
-   nothing added, nothing dropped, no rewriting of prose.
-   **结构保真转换**——标题、列表、表格、引用、粗体、破折号经 pandoc 一比一映射；PDF 与
-   md 同骨架——不增、不删、不改写正文。
+4. **Structure-preserving conversion** — pandoc carries supported headings,
+   lists, tables, blockquotes, bold, and em dashes into LaTeX. Apart from the
+   declared title-block and typesetting transformations, the rendered document
+   preserves the source prose and structural order.
+   **结构保真转换**——pandoc 将其支持的标题、列表、表格、引用、粗体与破折号转换为
+   LaTeX。除已声明的标题块与排版变换外，渲染文档保留源文正文及结构顺序。
 5. **Austere brand typography** — pure black on white, generous margins, the
    `VERTEX DIMENSION` wordmark in the running head, zero decoration; figures
    resolve from `figures/` via `\graphicspath`.
    **冷峻品牌排版**——纯黑白、宽页边、页眉置 `VERTEX DIMENSION` 字标、零装饰；配图经
    `\graphicspath` 从 `figures/` 解析。
-6. **Deterministic compile** — `scripts/render_pdf.py` runs pandoc → `.tex`, then
+6. **Scripted compile** — `scripts/render_pdf.py` runs pandoc → `.tex`, then
    XeLaTeX twice (headers/refs), then cleans aux; re-running on unchanged source
-   yields the same PDF.
-   **确定性编译**——`scripts/render_pdf.py` 跑 pandoc → `.tex`，再 XeLaTeX 两遍
-   （页眉/交叉引用），随后清 aux；源未变则重跑产出同一 PDF。
+   follows the same toolchain and overwrites the same output pair.
+   **脚本化编译**——`scripts/render_pdf.py` 跑 pandoc → `.tex`，再 XeLaTeX 两遍
+   （页眉/交叉引用），随后清 aux；源未变时重跑沿用同一工具链，并覆盖同一对输出路径。
 7. **Falsifiable build gate** — success means the PDF exists with pages > 0; a
    failed compile surfaces the last lines of the `.log`, never a silent miss.
    **可证伪的构建闸门**——成功＝PDF 存在且页数 > 0；编译失败则抛出 `.log` 末尾数行，
@@ -119,6 +120,6 @@ python scripts/render_pdf.py synthesis/*.md            # several · 多篇
 > 改后（本 skill）——*剥 YAML → 提 H1 为标题块 → pandoc 转正文 → `latex/<slug>.tex` →
 > XeLaTeX → `latex/<slug>.pdf`。`.tex` 是定稿源，PDF 是其编译；二者由一条命令重生成。*
 
-The difference is entirely: a reproducible source-to-PDF chain in the firm's form,
-not a one-off print that no one can rebuild.
-差别全在：一条以本机构形态呈现、可复现的"源到 PDF"链，而非无人能重建的一次性打印。
+The difference is entirely: a retained, rerunnable source-to-PDF chain in the
+firm's form, not a one-off print that no one can rebuild.
+差别全在：一条以本机构形态呈现、保留且可重跑的"源到 PDF"链，而非无人能重建的一次性打印。

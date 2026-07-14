@@ -1,29 +1,32 @@
 ---
 name: structured-plain-expression
 description: >-
-  Turn one dataset, experiment, or investigation into a structured plain-language
-  research post: state the finding in the title; open with a 30-second lookup;
-  advance figure by figure; explain how to read each result, what it shows, and
-  what follows; source every number; build insight from baseline to mechanism to
-  limit; close with one contrastive line. Keep the prose lay-readable without
-  thinning the logic. 把一份数据、实验或调查写成结构化白话研究帖：标题即结论，开篇提供
+  Turn one dataset, experiment, or investigation whose evidence advances through
+  multiple figures into a structured plain-language research post: state the
+  finding in the title; open with a 30-second lookup; advance figure by figure;
+  explain how to read each result, what it shows, and what follows; source every
+  number; build insight from baseline to mechanism to limit; close with one
+  contrastive line. Keep the prose lay-readable without thinning the logic. 把一份
+  以多张图表推进证据的数据集、实验或调查写成结构化白话研究帖：标题即结论，开篇提供
   30 秒速查，证据逐图推进，用人话解释怎么看、看出什么、接出什么；每个数字带真实出处，
   洞见从基线推进到机制与边界，并以一句对照收束。Use when writing or rewriting a
-  research post, 复盘帖, 数据分析帖, 实证总结, 把一份数据/实验写成帖子, 说人话的研究长文,
-  结构化文档, or "make this clearer / more structured / 说人话 / 逻辑再清晰一点".
+  multi-figure research post（复盘帖、数据分析帖、实证总结、把多图数据/实验写成帖子），
+  or when "make this clearer / more structured / 说人话 / 逻辑再清晰一点" explicitly
+  concerns a multi-figure research draft.
 ---
 
 # Structured Plain Expression · 结构化白话研究帖
 
 ## What this is | 这是什么
 
-In one line: **a way to write a data-backed study as a long post the reader
-grasps in 30 seconds, follows figure by figure without ever getting lost, and
+In one line: **a way to write a multi-figure, data-backed study as a long post the
+reader grasps in 30 seconds, follows figure by figure without ever getting lost, and
 finishes able to retell — opening on the finding, advancing as a chain, pinning
 every number to its source, stacking insight on insight, and closing on one line
 worth carrying away.**
-一句话：**一种把"有数据支撑的研究"写成长帖的方法——读者 30 秒抓住结论，逐图往下不迷路，
-读完能复述：开篇即结论，证据成链，每个数字钉住出处，洞见层层垒高，收在一句可带走的话上。**
+一句话：**一种把"有多张图表与数据支撑的研究"写成长帖的方法——读者 30 秒抓住结论，
+逐图往下不迷路，读完能复述：开篇即结论，证据成链，每个数字钉住出处，洞见层层垒高，
+收在一句可带走的话上。**
 
 Its register is **austere in logic, plain in language**: structure carries the
 argument, plain words carry the reader. It takes the austere-analytical-prose

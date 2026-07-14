@@ -96,16 +96,11 @@ defaults are profile-bound, not universal.
 语义色；顶栏标题 → 中央主视觉 → 三至五条对应要点。标签中文为主，只保留必要英文术语。
 这些默认只绑定该 profile，不是通用规则。
 
-Reference-profile filenames use the same verified work ID and section sequence as
-the asset ledger. `<work-id>` is `A{N}`, `M{N}`, or a verified local equivalent;
-`{NN}` is the zero-padded teaching-section sequence; `<course-key>` is the verified
-course code or a stable course slug.
-参照 profile 文件名使用与资产台账相同的已验证工作项 ID 与章节序号。`<work-id>` 是
-`A{N}`、`M{N}` 或经验证本地等价 ID；`{NN}` 是补零后的教学章节序号；`<course-key>` 是
-经验证课程代码或稳定课程 slug。
-
-`<work-id>_overview_full_<course-key>_visual.png`
-`<work-id>_M{NN}_<slug>_<course-key>_visual.png`
+Reference-profile filenames follow the asset ledger and the single naming
+contract in [logic.md](logic.md) under “Stanford reference profile + portable
+fallback.” Reuse those tokens verbatim; do not restate or fork the pattern here.
+参照 profile 的文件名服从资产台账，以及 [logic.md](logic.md)“Stanford 参照 profile＋
+可迁移回退”中的唯一命名契约。逐字复用其中 token；本文件不重述、也不分叉该模式。
 
 ### Text legibility | 文字可读性
 
