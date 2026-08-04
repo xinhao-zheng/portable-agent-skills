@@ -22,6 +22,7 @@ the method does not.
 | [`vd-report-ingest`](vd-report-ingest/SKILL.md) | New PDF/Markdown/image → bilingual transcript + summary · 新研报 → 双语文稿与摘要 |
 | [`vd-synthesis-refresh`](vd-synthesis-refresh/SKILL.md) | Summaries → index, conflict audit, or rolling synthesis · 摘要 → 索引、冲突审计或滚动综合 |
 | [`vd-essay-distill`](vd-essay-distill/SKILL.md) | Chosen synthesis scope → public research essay · 指定综合范围 → 对外研究文稿 |
+| [`vd-evidence-led-research-brief`](vd-evidence-led-research-brief/SKILL.md) | Heterogeneous evidence → concise, auditable public research brief · 异质证据 → 精炼、可复核的公开研究稿 |
 | [`vd-latex-render`](vd-latex-render/SKILL.md) | Finished document → brand LaTeX + PDF · 定稿文档 → 品牌 LaTeX 与 PDF |
 | [`stanford-lecture-notes`](stanford-lecture-notes/SKILL.md) | Structured course sources → traceable notes or unit synthesis · 课程来源 → 可追溯笔记或单元综合 |
 | [`stanford-assignment-guides`](stanford-assignment-guides/SKILL.md) | Assignment sources → bilingual view, overview, and action guide · 作业来源 → 双语题面、概述与行动 Guide |
@@ -65,7 +66,7 @@ into provenance, dependency, or rendered evidence. Deliverables stay task-specif
 | Family | Chain | Boundary |
 |---|---|---|
 | General writing & research · 通用写作与研究 | prose discipline; citation audit; one-study explanation; heterogeneous-evidence reframing · 文体纪律；引用审计；单一研究解释；异质证据重构 | method-neutral; source claims remain answerable · 方法中立；来源主张可追问 |
-| Vertex Dimension · 维度研报 | ingest → synthesis → essay → LaTeX/PDF · 入库 → 综合 → 文稿 → 排版 | project identity and local scripts remain explicit · 项目身份与本地脚本保持显式 |
+| Vertex Dimension · 维度研报 | ingest → synthesis → essay; heterogeneous evidence → evidence-led brief; finished document → LaTeX/PDF · 入库 → 综合 → 文稿；异质证据 → 证据驱动短稿；定稿 → 排版 | synthesis projection and new evidence-led research remain separate; project identity and local scripts stay explicit · 综合研判投影与新增证据研究保持分工；项目身份与本地脚本保持显式 |
 | Stanford-derived course work · Stanford 衍生课程工作流 | lecture sources → notes; assignment sources → guides; completed work → analysis; validated content → visuals · 讲义 → 笔记；题面 → Guide；完成工件 → 分析；已验证内容 → 配图 | Stanford is a verified reference profile, not an applicability boundary · Stanford 是经验证参照 profile，不是适用边界 |
 
 ### Stanford reference profile | Stanford 参照 profile
@@ -122,6 +123,7 @@ intact.
 | Scope | Required capability |
 |---|---|
 | Core writing, audit, notes, guides, analysis · 核心写作、审计、笔记、Guide、分析 | read and write Markdown; inspect the supplied repository and source files · 读写 Markdown；检查用户提供的仓库与来源 |
+| `vd-evidence-led-research-brief` | current-source retrieval for unstable claims; calculation or figure capabilities only when the brief requires derived results or visuals · 时效主张须具备当前来源检索；只有短稿需要推导结果或图片时才要求计算或制图能力 |
 | `vd-report-ingest` | PDF/image reading; project workflow may use Python 3.11+ and PyMuPDF · PDF/图片读取；项目工作流可能需要 Python 3.11+ 与 PyMuPDF |
 | `stanford-assignment-visuals` | raster image generation plus actual image inspection · 位图生成能力与实际图片检查能力 |
 | `vd-latex-render` | project `scripts/render_pdf.py`, pandoc 3.x, TeX Live, XeLaTeX, `ctexart` · 项目脚本、pandoc 3.x、TeX Live、XeLaTeX、`ctexart` |
