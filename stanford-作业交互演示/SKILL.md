@@ -9,19 +9,19 @@ description: >-
 
 ## Source | 题面
 
-Use the assigned edition. Reproduce every English question and subquestion, pairing each paragraph with its Chinese translation. Give the common setup once before its parts. Keep the original numbering, points, assumptions, formulas, figures, tables, captions, footnotes, data splits, code identifiers and required outputs. Cite the source page.
+Use the assigned edition. Open each walkthrough with the parent question and the current part in English and Chinese, paired paragraph by paragraph and visible on the same page. Include shared definitions and any intermediate setup the part relies on. Preserve numbering, points, assumptions, formulas, figures, tables, captions, footnotes, data splits, code identifiers and required outputs. Cite the source page.
 
-按本期题册完整收录每道大题和子问，英文原文与中文译文逐段对应。共用题干置于各子问之前。保留题号、分值、假设、公式、图表、图注、脚注、数据划分、代码标识和作答要求，标明原题页码。
+每个演示页开头直接列出本期大题和当前子问的完整英中题面，原文译文逐段对应，默认展开。补齐本问沿用的条件、定义及中间层题干。保留题号、分值、假设、公式、图表、图注、脚注、数据划分、代码标识和作答要求，标明原题页码。
 
 ## Interaction | 演示
 
-Frame each part around a testable question. Explain new quantities in plain Chinese. Tell the reader which input to change, where to look on the plot and which value will change. Identify the dataset and split, or state the assumptions of the example. For iterative methods, show the initial state, update, stopping condition and loss history. Provide step, run and reset controls.
+Teach each part to a first-time reader. Say what is given and what to find. Work through a small example in plain Chinese, explaining each new symbol and why each step follows. Show intermediate values or states. Ask the reader to predict a change, try a named control and compare the result with the example. Then return to the original question and its assumptions.
 
-每个子问给读者一个能动手检验的问题。用白话解释新出现的量，说明改哪个输入、看图的哪里、哪个读数会变。注明课程数据与划分，或写清教学示例的设定。迭代题可单步、连跑和复位，显示初值、更新规则、停止条件与损失轨迹。
+把每个子问讲给第一次接触它的人。先说已知什么、要求什么，再带读者算一个小例子。符号一出现就用白话解释，写出中间数值或状态，讲清每一步为什么这样做。让读者先猜，再操作指定控件，到图上或读数里核对。最后带着例子回到原题，说明哪些条件起了作用。
 
-Keep essential conditions in the claim and its title. For a proof, connect the example to the general argument and identify the step that uses each assumption. Give one input and an expected result for self-check.
+Distinguish teaching examples from course data and identify the split. For a proof, show how the reasoning extends beyond the example. For an iterative method, show the initial state, an update, the stopping condition and loss history, with step, run and reset controls. Give one input and an expected result for self-check.
 
-写明结论成立的条件，影响含义的限定词也要写进标题。证明题从例子回到一般推导，指出哪一步用到了题设。自检给出具体输入和可核对的结果。
+区分教学例子和课程数据，注明数据划分。证明题说明怎样从具体例子推到一般情形。迭代题可单步、连跑和复位，显示初值、更新规则、停止条件与损失轨迹。自检给出具体输入和可核对的结果。
 
 ## Delivery | 交付
 
@@ -35,6 +35,6 @@ Set Chinese titles in a Song-style serif at 28–40 px, body text in a sans seri
 
 ## Verification | 验收
 
-Compare the bilingual questions with the source, including page breaks, figures and footnotes. Open the HTML offline, follow each question–experiment link in both directions and exercise every part. Check the result against a boundary case or a hand calculation and test keyboard navigation, reading order and formulas on a narrow screen.
+Compare each walkthrough's bilingual text with the source, including nested parts, page breaks, figures and footnotes. Open a part directly offline and read it from the beginning. Follow the worked example with the controls, check a hand calculation or boundary case, and test links, keyboard navigation and narrow-screen reading order.
 
-对照原题核查双语题面，留意跨页题干、图表和脚注。断网打开 HTML，逐问往返题面与演示并操作控件，用边界值或手算样例核对结果。检查键盘导航、窄屏阅读顺序和公式排版。
+逐页对照原题，核查嵌套子问、跨页题干、图表和脚注。断网直接打开任一子问，从头读题，照例子操作并核对手算结果或边界值。检查链接、键盘导航、窄屏阅读顺序和公式排版。
