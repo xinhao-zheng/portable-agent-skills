@@ -15,13 +15,13 @@ Use the assigned edition. Open each walkthrough with the parent question and the
 
 ## Interaction | 演示
 
-Teach each part to a first-time reader. Say what is given and what to find. Work through a small example in plain Chinese, explaining each new symbol and why each step follows. Show intermediate values or states. Ask the reader to predict a change, try a named control and compare the result with the example. Then return to the original question and its assumptions.
+Give the reader a way into the question before the worked example. Say in plain Chinese what the quantities stand for and what a satisfactory answer would show. Read the unfamiliar notation aloud in words, unpack the operations in order, and substitute small numbers where useful. For a coding task, trace one input to its expected output. Place this help beside the question or link to it directly from the top.
 
-把每个子问讲给第一次接触它的人。先说已知什么、要求什么，再带读者算一个小例子。符号一出现就用白话解释，写出中间数值或状态，讲清每一步为什么这样做。让读者先猜，再操作指定控件，到图上或读数里核对。最后带着例子回到原题，说明哪些条件起了作用。
+先让读者读懂题目。用白话说明题里的量各指什么、最后要算出或说明什么。把陌生符号念成一句话，按实际计算顺序拆开，必要时用小数值代入。代码题用一组输入说明预期输出。读题引导紧邻原题，或由页首直接进入。
 
-Distinguish teaching examples from course data and identify the split. For a proof, show how the reasoning extends beyond the example. For an iterative method, show the initial state, an update, the stopping condition and loss history, with step, run and reset controls. Give one input and an expected result for self-check.
+Start the example with one step a beginner can check by hand. Explain why each later step follows. Ask the reader to predict a change, use a named control and find the result on the graph. For a proof, return from the example to the general argument and its assumptions. Identify course data and splits. For iterative methods, show the initial state, updates, stopping condition and loss history, with step, run and reset controls.
 
-区分教学例子和课程数据，注明数据划分。证明题说明怎样从具体例子推到一般情形。迭代题可单步、连跑和复位，显示初值、更新规则、停止条件与损失轨迹。自检给出具体输入和可核对的结果。
+例子从初学者能手算核对的一步开始，逐步说明为什么这样做。让读者先预测，再操作指定控件，在图上找到对应的变化。证明题从例子回到一般推导，指出用到的假设。注明课程数据及划分。迭代题可单步、连跑和复位，显示初值、更新规则、停止条件与损失轨迹。
 
 ## Delivery | 交付
 
