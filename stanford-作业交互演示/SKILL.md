@@ -19,9 +19,9 @@ Give the reader a way into the question before the worked example. Say in plain 
 
 先让读者读懂题目。用白话说明题里的量各指什么、最后要算出或说明什么。把陌生符号念成一句话，按实际计算顺序拆开，必要时用小数值代入。代码题用一组输入说明预期输出。读题引导紧邻原题，或由页首直接进入。
 
-Start the example with one step a beginner can check by hand. Explain why each later step follows. Ask the reader to predict a change, use a named control and find the result on the graph. For a proof, return from the example to the general argument and its assumptions. Identify course data and splits. For iterative methods, show the initial state, updates, stopping condition and loss history, with step, run and reset controls.
+Give every part a scene built from its own objects. Let the reader predict what one action will do, then see which object moves, splits, connects or changes hands, and why. For a question about people, show who makes the decision and who bears its consequence. Drive the scene and its readouts from the same state. Begin with a step the reader can check by hand. For a proof, return from the example to the general argument and its assumptions. Identify course data and splits. For iterative methods, show the initial state, updates, stopping condition and loss history, with step, run and reset controls.
 
-例子从初学者能手算核对的一步开始，逐步说明为什么这样做。让读者先预测，再操作指定控件，在图上找到对应的变化。证明题从例子回到一般推导，指出用到的假设。注明课程数据及划分。迭代题可单步、连跑和复位，显示初值、更新规则、停止条件与损失轨迹。
+每个子问都用题里的具体对象做演示。从能手算的一步开始，让读者先猜，再动手，看清哪个对象移动、分开、连上或交到谁手里，以及为什么。涉及人的题，画出谁做决定、谁承担后果。画面和读数取自同一次计算。证明题从例子回到一般推导，指出用到的假设。注明课程数据及划分。迭代题可单步、连跑和复位，显示初值、更新规则、停止条件与损失轨迹。
 
 ## Delivery | 交付
 
@@ -35,6 +35,6 @@ Set Chinese titles in a Song-style serif at 28–40 px, body text in a sans seri
 
 ## Verification | 验收
 
-Compare each walkthrough's bilingual text with the source, including nested parts, page breaks, figures and footnotes. Open a part directly offline and read it from the beginning. Follow the worked example with the controls, check a hand calculation or boundary case, and test links, keyboard navigation and narrow-screen reading order.
+Compare each walkthrough's bilingual text with the source, including nested parts, page breaks, figures and footnotes. Open a part directly offline and read it from the beginning. For each part, hide the final readout and compare two settings or successive steps. Check that the picture itself shows what changed and why. Verify a hand calculation or boundary case, and test links, keyboard navigation and narrow-screen reading order.
 
-逐页对照原题，核查嵌套子问、跨页题干、图表和脚注。断网直接打开任一子问，从头读题，照例子操作并核对手算结果或边界值。检查链接、键盘导航、窄屏阅读顺序和公式排版。
+逐页对照原题，核查嵌套子问、跨页题干、图表和脚注。断网直接打开任一子问，从头读题。逐问遮住最终读数，切换参数或前进一步，检查能否从画面指出哪里变了、为什么。核对手算结果或边界值。检查链接、键盘导航、窄屏阅读顺序和公式排版。
