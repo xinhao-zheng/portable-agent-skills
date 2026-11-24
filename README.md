@@ -24,6 +24,7 @@ Bilingual Agent Skills for writing, research, coursework, and media production. 
 | [`stanford-assignment-analysis`](stanford-assignment-analysis/SKILL.md) | Review completed work against the student's code, written answers, and results · 依据代码、书面答案和结果复盘已完成的作业 |
 | [`stanford-assignment-visuals`](stanford-assignment-visuals/SKILL.md) | Create and inspect teaching illustrations for a course or assignment · 为课程或作业制作教学配图，逐张核对 |
 | [`stanford-作业交互演示`](stanford-作业交互演示/SKILL.md) | Build an interactive HTML guide with bilingual questions and plain Chinese explanations · 将整份作业做成交互式 HTML，附双语题面和中文白话讲解 |
+| [`stanford-作业教学解答`](stanford-作业教学解答/SKILL.md) | Prepare illustrated worked solutions and code for each problem set · 编写逐问教学解答，配图并附上题目要求的代码 |
 | [`stanford-课程资料中文版`](stanford-课程资料中文版/SKILL.md) | Translate course materials into Simplified Chinese in their original formats · 将课程资料完整译为简体中文，保留原文件格式 |
 | [`stanford-课程视频字幕与配音`](stanford-课程视频字幕与配音/SKILL.md) | Transcribe lectures, add bilingual captions, and optionally dub them in Mandarin · 转录课程录像，制作双语字幕，可按需配普通话音轨 |
 
